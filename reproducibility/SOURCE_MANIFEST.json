@@ -1,0 +1,690 @@
+{
+  "release": "TRACER-RAG code publication package",
+  "prepared_on": "2026-11-07",
+  "source_locations": "Relative project locations, or pre-existing-export for the supplied desktop snapshot",
+  "line_endings": "Public text normalized to LF with one final newline; original source hash retains original bytes",
+  "new_utilities": [
+    "prepare_ter_corpus.py",
+    "run_evicr.py",
+    "paired_statistics.py",
+    "examples/offline_demo.py",
+    "scripts/check_release.py"
+  ],
+  "self_hash_policy": "This manifest and SHA256SUMS.txt are excluded here to avoid recursive hashes; SHA256SUMS covers this manifest.",
+  "files": [
+    {
+      "release_path": ".env.example",
+      "release_sha256": "b0a0c4186566491c9ddc4b2d9c29877423f2457c151e88db0c4918de0e1be749",
+      "classification": "publication_addition"
+    },
+    {
+      "release_path": ".gitattributes",
+      "release_sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c",
+      "classification": "publication_addition"
+    },
+    {
+      "release_path": ".github/workflows/checks.yml",
+      "release_sha256": "3f05f9701fcd25ccdc100f366f138dfbc2015ab205eb1e180290328d515e29a9",
+      "classification": "publication_addition"
+    },
+    {
+      "release_path": ".gitignore",
+      "release_sha256": "bf6c12e9aa4b5fa575501d2da141dec645f7e2d959346714feb3b8762cb8f768",
+      "classification": "modified_for_publication",
+      "source_location": "pre-existing-export/.gitignore",
+      "source_sha256": "56cc1bd34add2633112049ef7bcf3342d8cf7df417b77758d1a976f008cc6282"
+    },
+    {
+      "release_path": "DATA_AVAILABILITY.md",
+      "release_sha256": "d50364b05278674ec00ee2f1510a74b9c478c09bdea3601e22386c957de1305c",
+      "classification": "publication_addition"
+    },
+    {
+      "release_path": "README.md",
+      "release_sha256": "648487362e458f15d8e9142108127bf8836f65b1d3f4eb24e2d78321846e0100",
+      "classification": "modified_for_publication",
+      "source_location": "pre-existing-export/README.md",
+      "source_sha256": "be4a57f7e33ccdd2303745604b125ee0003a852b0eaf06eafd31c3771b972d41"
+    },
+    {
+      "release_path": "README.zh-CN.md",
+      "release_sha256": "53d80e864129ad34aef570bba08bc4bdb83e49fbce1af4c815696c815b046ca6",
+      "classification": "publication_addition"
+    },
+    {
+      "release_path": "RIGHTS.md",
+      "release_sha256": "8f08458011934daf04348e5f793b7c869691ba29d4f3197c0fd8921a7860e672",
+      "classification": "publication_addition"
+    },
+    {
+      "release_path": "benchmark_integrity.py",
+      "release_sha256": "fe5f4ee49125ae767d10346878d324aeb8d686dd22a46fa136f86471d60e9d8a",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/benchmark_integrity.py",
+      "source_sha256": "fe5f4ee49125ae767d10346878d324aeb8d686dd22a46fa136f86471d60e9d8a"
+    },
+    {
+      "release_path": "build_aek_from_cleaned.py",
+      "release_sha256": "87a66b7278a0f145dc3187654e313572f38863c5ba3507fe85847c9ef7682cbb",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "R4/build_aek_from_cleaned.py",
+      "source_sha256": "87a66b7278a0f145dc3187654e313572f38863c5ba3507fe85847c9ef7682cbb"
+    },
+    {
+      "release_path": "build_revision_evidence.py",
+      "release_sha256": "d7f12eb386cfbce525998a977753f64512c767cf2ae553fe21981f48547af40a",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "alignrag_tcm/build_revision_evidence.py",
+      "source_sha256": "d7f12eb386cfbce525998a977753f64512c767cf2ae553fe21981f48547af40a"
+    },
+    {
+      "release_path": "combine_open_qa_ai_judges.py",
+      "release_sha256": "94fa9bfcc2be551a6f4bfa0ec1ebc7d57589e688b7f22900df9c9bd5e6de0e96",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "alignrag_tcm/combine_open_qa_ai_judges.py",
+      "source_sha256": "94fa9bfcc2be551a6f4bfa0ec1ebc7d57589e688b7f22900df9c9bd5e6de0e96"
+    },
+    {
+      "release_path": "docs/BENCHMARK_LEAKAGE_AND_PROTOCOL_AUDIT_20261020.md",
+      "release_sha256": "cbd025fc222d93085c8b2e26ff746e806e9e1f25abbc47bbc1c699f7b911bfdb",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/docs/BENCHMARK_LEAKAGE_AND_PROTOCOL_AUDIT_20261020.md",
+      "source_sha256": "cbd025fc222d93085c8b2e26ff746e806e9e1f25abbc47bbc1c699f7b911bfdb"
+    },
+    {
+      "release_path": "docs/CODE_STRUCTURE.md",
+      "release_sha256": "be7ec225f7e0088d8c5cecdb0a2d5356c7044f192c23b6197103c41f596a6937",
+      "classification": "modified_for_publication",
+      "source_location": "pre-existing-export/docs/CODE_STRUCTURE.md",
+      "source_sha256": "6f658577fe5ada7a89246eab6f19f7a8434532d3c53d8767122742c4c717335b"
+    },
+    {
+      "release_path": "docs/DATA_CONTRACTS.md",
+      "release_sha256": "ac46b6f40d36814f4b478b7ef89e2bdf770decb52420651137e6f155fb86ea2e",
+      "classification": "publication_addition"
+    },
+    {
+      "release_path": "docs/QWEN35_THREE_MODEL_REPLAY.md",
+      "release_sha256": "278456bbcc1e24413a5cbc8cb2389b6d38da1b39e9773b06da99893c4d4be115",
+      "classification": "modified_for_publication",
+      "source_location": "pre-existing-export/docs/QWEN35_THREE_MODEL_REPLAY.md",
+      "source_sha256": "b58d400629eb1efbb9ccd89e75400aa7b58125c78bf74abbed55ea02834c84b8"
+    },
+    {
+      "release_path": "docs/RELEASE_SCOPE.md",
+      "release_sha256": "1a068c18396b0d1c97356b1385436f74c2287ebc7debb9382a167f9e71fff3d8",
+      "classification": "publication_addition"
+    },
+    {
+      "release_path": "docs/REPRODUCIBILITY.md",
+      "release_sha256": "d6cb10fcd9fb16429209dc00092cdb6aca48ec38d9dfaccce0a34af9fab2147b",
+      "classification": "publication_addition"
+    },
+    {
+      "release_path": "docs/TER_WRONG_ONLY_THREE_MODEL.md",
+      "release_sha256": "e9f4f61ccf5e8e6940ac1d2a65bb7ec653907b965884ec6a6c30662e8593e3c9",
+      "classification": "modified_for_publication",
+      "source_location": "pre-existing-export/docs/TER_WRONG_ONLY_THREE_MODEL.md",
+      "source_sha256": "e09991b0a4af55342ed196a0973ddb272e0d2e47b90ceb94820bd95235b74aab"
+    },
+    {
+      "release_path": "docs/中医_AlignRAG_处理流程与方法说明.md",
+      "release_sha256": "a060742bf2d1f1484337a58b7a0df4da873fc6294213c889469821b9796e633e",
+      "classification": "modified_for_publication",
+      "source_location": "pre-existing-export/docs/中医_AlignRAG_处理流程与方法说明.md",
+      "source_sha256": "061d40509c8a6066be991ec1ece7f77b82e459fc8504d007b989641c30191958"
+    },
+    {
+      "release_path": "download_benchmark_model.py",
+      "release_sha256": "ee1191cf198c2aba2ed99eb8ee6d343fd7b9c3bad68c92e2f95e33603ec9c325",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/download_benchmark_model.py",
+      "source_sha256": "ee1191cf198c2aba2ed99eb8ee6d343fd7b9c3bad68c92e2f95e33603ec9c325"
+    },
+    {
+      "release_path": "download_dense_rag_sources.py",
+      "release_sha256": "63060c1ccaa183d3358a09d72e0d4806e3d1b6846957f82909d3c818a78bc6ce",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "alignrag_tcm/download_dense_rag_sources.py",
+      "source_sha256": "63060c1ccaa183d3358a09d72e0d4806e3d1b6846957f82909d3c818a78bc6ce"
+    },
+    {
+      "release_path": "evaluate_evicr_qd_fidelity.py",
+      "release_sha256": "15f559a7955a2bb26d33ab990858597397e454bf315dd13077b1963cee6e17e3",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "alignrag_tcm/evaluate_evicr_qd_fidelity.py",
+      "source_sha256": "15f559a7955a2bb26d33ab990858597397e454bf315dd13077b1963cee6e17e3"
+    },
+    {
+      "release_path": "examples/offline_demo.py",
+      "release_sha256": "8e265003bc49ca682ee9b5d01809adfc665aac97cc255b9a4b367a160dfec0b4",
+      "classification": "publication_addition"
+    },
+    {
+      "release_path": "export_critic_sft.py",
+      "release_sha256": "3a56806600091d8c9804cba11c6db854cde79b4ddf96e4ee95275e06b18a85b3",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/export_critic_sft.py",
+      "source_sha256": "3a56806600091d8c9804cba11c6db854cde79b4ddf96e4ee95275e06b18a85b3"
+    },
+    {
+      "release_path": "export_evicr_qd_sft.py",
+      "release_sha256": "e5df8b668d78aa0658602b1c1c44d4b4b45be85d578391d23a52c77375cbc1fb",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "alignrag_tcm/export_evicr_qd_sft.py",
+      "source_sha256": "e5df8b668d78aa0658602b1c1c44d4b4b45be85d578391d23a52c77375cbc1fb"
+    },
+    {
+      "release_path": "finalize_medical_qa_screen.py",
+      "release_sha256": "4a0a6c2b580ff9405a05ee5d2701db4ca33aa7053da79d04b32213a263d990fa",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "alignrag_tcm/finalize_medical_qa_screen.py",
+      "source_sha256": "4a0a6c2b580ff9405a05ee5d2701db4ca33aa7053da79d04b32213a263d990fa"
+    },
+    {
+      "release_path": "generate_critic_supervision.py",
+      "release_sha256": "d91a7fb86cb2655847044e4eb7426ab761e0ee134691862dff68697a3d4bd39b",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/generate_critic_supervision.py",
+      "source_sha256": "d91a7fb86cb2655847044e4eb7426ab761e0ee134691862dff68697a3d4bd39b"
+    },
+    {
+      "release_path": "generate_evicr_qd_labels.py",
+      "release_sha256": "f16f61bce87d1b36a394aa68c1f254471f07f9795522ad79f54c8add02da83d0",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "alignrag_tcm/generate_evicr_qd_labels.py",
+      "source_sha256": "f16f61bce87d1b36a394aa68c1f254471f07f9795522ad79f54c8add02da83d0"
+    },
+    {
+      "release_path": "grade_dense_chunk_rag.py",
+      "release_sha256": "92a6b75a1045512872898369bf1f745f9eaa30330855aafb7d3c0d58952e613c",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "alignrag_tcm/grade_dense_chunk_rag.py",
+      "source_sha256": "92a6b75a1045512872898369bf1f745f9eaa30330855aafb7d3c0d58952e613c"
+    },
+    {
+      "release_path": "grade_no_rag.py",
+      "release_sha256": "ae57ce0458c84126a660513505360b33b84923b4842cd4a913a4cb06578793f2",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "alignrag_tcm/grade_no_rag.py",
+      "source_sha256": "ae57ce0458c84126a660513505360b33b84923b4842cd4a913a4cb06578793f2"
+    },
+    {
+      "release_path": "grade_questionbank_results.py",
+      "release_sha256": "e71a4be62a8a9a84c405545e1be842225aa1c45cba15cabff0e4dbb68aef2cf2",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "alignrag_tcm/grade_questionbank_results.py",
+      "source_sha256": "e71a4be62a8a9a84c405545e1be842225aa1c45cba15cabff0e4dbb68aef2cf2"
+    },
+    {
+      "release_path": "grade_single_results.py",
+      "release_sha256": "952c7eeea893c0a0c125a2301d63488cc023abf5ed02e7b617c5bccb9dd28057",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/grade_single_results.py",
+      "source_sha256": "952c7eeea893c0a0c125a2301d63488cc023abf5ed02e7b617c5bccb9dd28057"
+    },
+    {
+      "release_path": "materialize_critic_retrieval.py",
+      "release_sha256": "a41ab3be627bdfe554fdff18a5b8318476e7e4f11902ce74a8bab73c6bc99f35",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/materialize_critic_retrieval.py",
+      "source_sha256": "a41ab3be627bdfe554fdff18a5b8318476e7e4f11902ce74a8bab73c6bc99f35"
+    },
+    {
+      "release_path": "merge_revision_results.py",
+      "release_sha256": "1b772db60cb89e6c34a8606cd4a8a1623f072ce324f7f7a3e5438261fe46a1e1",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "alignrag_tcm/merge_revision_results.py",
+      "source_sha256": "1b772db60cb89e6c34a8606cd4a8a1623f072ce324f7f7a3e5438261fe46a1e1"
+    },
+    {
+      "release_path": "paired_statistics.py",
+      "release_sha256": "84df0e113d86615a71f8260a5c2b70f9f5dd9b153654cff7af8fabebafbd5040",
+      "classification": "publication_addition"
+    },
+    {
+      "release_path": "preflight_generator_deployment.py",
+      "release_sha256": "98b98289a4341e4fcb384422cba4f3593477fe4270603504a5d39b31f38e2edb",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/preflight_generator_deployment.py",
+      "source_sha256": "98b98289a4341e4fcb384422cba4f3593477fe4270603504a5d39b31f38e2edb"
+    },
+    {
+      "release_path": "preflight_wrong_only.py",
+      "release_sha256": "2a98a2b7767f92ec55d49cb29aa054ef8ff53445bf6f6a27a134dd116df8a7a1",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/preflight_wrong_only.py",
+      "source_sha256": "2a98a2b7767f92ec55d49cb29aa054ef8ff53445bf6f6a27a134dd116df8a7a1"
+    },
+    {
+      "release_path": "preflight_wrong_only_memory_v2.py",
+      "release_sha256": "0ab056eb2d6af60ebe772bab3ab0ba596e7f06a94b8ee837ea091a31422724ba",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/preflight_wrong_only_memory_v2.py",
+      "source_sha256": "0ab056eb2d6af60ebe772bab3ab0ba596e7f06a94b8ee837ea091a31422724ba"
+    },
+    {
+      "release_path": "preflight_wrong_only_memory_v3.py",
+      "release_sha256": "61acb8f9c965677ac2eff8ac8943a9d1536ce136d1aaec1e2d449aabca554f21",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/preflight_wrong_only_memory_v3.py",
+      "source_sha256": "61acb8f9c965677ac2eff8ac8943a9d1536ce136d1aaec1e2d449aabca554f21"
+    },
+    {
+      "release_path": "prepare_critic_seed_set.py",
+      "release_sha256": "860b3f2262423d9a787ed6b1efb23cd1df2bf54bb84b834ba8e03217440d52bc",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/prepare_critic_seed_set.py",
+      "source_sha256": "860b3f2262423d9a787ed6b1efb23cd1df2bf54bb84b834ba8e03217440d52bc"
+    },
+    {
+      "release_path": "prepare_evicr_qd_supervision.py",
+      "release_sha256": "fb75450f9af39bd93c2592c3e2b178ef5c17273122fa3232ea0055c71c20357b",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "alignrag_tcm/prepare_evicr_qd_supervision.py",
+      "source_sha256": "fb75450f9af39bd93c2592c3e2b178ef5c17273122fa3232ea0055c71c20357b"
+    },
+    {
+      "release_path": "prepare_questionbank_input.py",
+      "release_sha256": "7c54469901fd83538b114f41ef97ba688ae89c40acee3e6f0ebee178c5acda4f",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "alignrag_tcm/prepare_questionbank_input.py",
+      "source_sha256": "7c54469901fd83538b114f41ef97ba688ae89c40acee3e6f0ebee178c5acda4f"
+    },
+    {
+      "release_path": "prepare_ter_corpus.py",
+      "release_sha256": "82de6ad69e2f6e9dd6297e381ac10781e8bebc9cb5f1cb6228353ac9a864d6be",
+      "classification": "publication_addition"
+    },
+    {
+      "release_path": "pytest.ini",
+      "release_sha256": "c28d7ee43186a578bc0f8867e26fdf7edcb0f1275b12d71d85a20e95a524c4ef",
+      "classification": "publication_addition"
+    },
+    {
+      "release_path": "replace_targeted_inference_rows.py",
+      "release_sha256": "3a08180b6118dc007d48f220d0d408ab531f06ceddaea7ebf8cf6a601a413aaf",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/replace_targeted_inference_rows.py",
+      "source_sha256": "3a08180b6118dc007d48f220d0d408ab531f06ceddaea7ebf8cf6a601a413aaf"
+    },
+    {
+      "release_path": "reproducibility/weight_search/README.md",
+      "release_sha256": "16fef47518587d979c7a3e59d05df0e41097c6a7d4bcf3ff0389cb9394f155ca",
+      "classification": "publication_addition"
+    },
+    {
+      "release_path": "reproducibility/weight_search/dev_ablation_sensitivity.csv",
+      "release_sha256": "1d26cb8329e124367668596152fc047183d4ecd7f0346b5b4f1df27ffc381f1b",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "R4/weight_search_20261103_v3/dev_ablation_sensitivity.csv",
+      "source_sha256": "e6c784e44cedbb577be36cabbf5a426c95dea206ea99c116730b692d03733092"
+    },
+    {
+      "release_path": "reproducibility/weight_search/dev_grid_top100.csv",
+      "release_sha256": "869a57c6cdcd3d959db27ff03a59034490cff9923f119c5768665f821d0187b0",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "R4/weight_search_20261103_v3/dev_grid_top100.csv",
+      "source_sha256": "03429f8d0f95a612cc95fa66d27394b9cd638ed620ab9adc395729f036a1f525"
+    },
+    {
+      "release_path": "reproducibility/weight_search/summary.json",
+      "release_sha256": "d2a62dc8d1495148e5209124ec11ad422dded0c139b81599da5d637861fe4788",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "R4/weight_search_20261103_v3/summary.json",
+      "source_sha256": "d2a62dc8d1495148e5209124ec11ad422dded0c139b81599da5d637861fe4788"
+    },
+    {
+      "release_path": "reproducibility/weight_search/test_ablation_sensitivity.csv",
+      "release_sha256": "330ec933c0c833f6969d136db8dbf2e3c9cfc8191eeab0906c5fe105844b1a04",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "R4/weight_search_20261103_v3/test_ablation_sensitivity.csv",
+      "source_sha256": "e985537d24cdfa51f035b4925855c21f8cf2ea08e231ea0924ef7f446aad8643"
+    },
+    {
+      "release_path": "requirements-test.txt",
+      "release_sha256": "6dc0863211b36e664134a07f40853cf2eb468e5aa596a45ab78ae344bff362ce",
+      "classification": "publication_addition"
+    },
+    {
+      "release_path": "requirements.txt",
+      "release_sha256": "799c06e287759a6bfae4704462da32552f063d19c6865b5595b8be4bf4c4e89d",
+      "classification": "modified_for_publication",
+      "source_location": "pre-existing-export/requirements.txt",
+      "source_sha256": "abc210c4575fa5d1b5e9eb237312ea40eeafd373c6c29422160153c5b21cb80c"
+    },
+    {
+      "release_path": "reuse_qwen35_baselines.py",
+      "release_sha256": "4b06ac21a35fae2e95afbaa1621924b69c1a3620e7bb5a9b34a590f5d308b908",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/reuse_qwen35_baselines.py",
+      "source_sha256": "4b06ac21a35fae2e95afbaa1621924b69c1a3620e7bb5a9b34a590f5d308b908"
+    },
+    {
+      "release_path": "reuse_wrong_only_baselines.py",
+      "release_sha256": "9428016476c846da16901809347dc8dcd6f53d58f624dd6f87a72ced690a4663",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/reuse_wrong_only_baselines.py",
+      "source_sha256": "9428016476c846da16901809347dc8dcd6f53d58f624dd6f87a72ced690a4663"
+    },
+    {
+      "release_path": "run_aek_hybrid_r4.py",
+      "release_sha256": "4342169dbdd5144cb5548ce76fa6a6d95d5fa698ffc53a9a2d10da17f23fc762",
+      "classification": "modified_for_publication",
+      "source_location": "R4/run_aek_hybrid_r4.py",
+      "source_sha256": "5e528f15066132b819930665d49c8738954d6c021ca71416d4728c63abc81fe3",
+      "change_note": "Added explicit six-weight CLI option/validation and manifest recording; retained legacy defaults."
+    },
+    {
+      "release_path": "run_dense_chunk_rag.py",
+      "release_sha256": "596bc03fbf3f163f6a767ebe08dc3936ba32f48d8bcf88742ade8d5421f34fa5",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/run_dense_chunk_rag.py",
+      "source_sha256": "596bc03fbf3f163f6a767ebe08dc3936ba32f48d8bcf88742ade8d5421f34fa5"
+    },
+    {
+      "release_path": "run_evicr.py",
+      "release_sha256": "ff06999b3b382bc7c93dafba390931884d543b27bed8b54ca9908d258c721dc6",
+      "classification": "publication_addition"
+    },
+    {
+      "release_path": "run_evidence_refinement_wrong_questions.py",
+      "release_sha256": "a9543a43dac4312fb8cfdd07372432ad1dc85187b4ac7c3ad4b198ac06e3ebf9",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/run_evidence_refinement_wrong_questions.py",
+      "source_sha256": "a9543a43dac4312fb8cfdd07372432ad1dc85187b4ac7c3ad4b198ac06e3ebf9"
+    },
+    {
+      "release_path": "run_external_evaluation.py",
+      "release_sha256": "e45f36fa949e351f3f625efe524dc0e4a8f299887d7621ef0f92db64fec4156c",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "alignrag_tcm/run_external_evaluation.py",
+      "source_sha256": "e45f36fa949e351f3f625efe524dc0e4a8f299887d7621ef0f92db64fec4156c"
+    },
+    {
+      "release_path": "run_frozen_evidence_generation.py",
+      "release_sha256": "53d838faa77628b58014b80acaafdd209b708242d31015cc672cf518a4bdb574",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/run_frozen_evidence_generation.py",
+      "source_sha256": "53d838faa77628b58014b80acaafdd209b708242d31015cc672cf518a4bdb574"
+    },
+    {
+      "release_path": "run_multimodel_exam_benchmark.sh",
+      "release_sha256": "fb42d1a1040b1567512f22253f1f92ce821703e02f77c55768309c1b9ea37ddf",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/run_multimodel_exam_benchmark.sh",
+      "source_sha256": "fb42d1a1040b1567512f22253f1f92ce821703e02f77c55768309c1b9ea37ddf"
+    },
+    {
+      "release_path": "run_questionbank_no_rag.py",
+      "release_sha256": "ce24c7b6d8e82df2d4769a0ac8a7298a50ae7f1581431453a9d8835cced32499",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "alignrag_tcm/run_questionbank_no_rag.py",
+      "source_sha256": "ce24c7b6d8e82df2d4769a0ac8a7298a50ae7f1581431453a9d8835cced32499"
+    },
+    {
+      "release_path": "run_questionbank_rag_vs_alignrag.py",
+      "release_sha256": "4bf7e73676593e5b0a7b865a2b5b6c3791b52f6033d50920c86668d98c185609",
+      "classification": "modified_for_publication",
+      "source_location": "pre-existing-export/run_questionbank_rag_vs_alignrag.py",
+      "source_sha256": "6d52d570689c3d935b3fdfbfa8eabfc1f8bf08f97df4eb6c7676e37e9718d13f",
+      "change_note": "Deferred sentence-transformers import to model-use stage for lightweight offline tests."
+    },
+    {
+      "release_path": "run_qwen35_answer_refinement.py",
+      "release_sha256": "9e38d23a51171936c4f39a90313f795303d2913b9ae12dc9a1f0d7913adf2f6b",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/run_qwen35_answer_refinement.py",
+      "source_sha256": "9e38d23a51171936c4f39a90313f795303d2913b9ae12dc9a1f0d7913adf2f6b"
+    },
+    {
+      "release_path": "run_remote_critic_pipeline.sh",
+      "release_sha256": "cbac2c2b161a649bf4293166b9ff7d994ee255b63e2cd951f00db6766a795327",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/run_remote_critic_pipeline.sh",
+      "source_sha256": "694b8f849aaa1341846f365ecdc6880314c394a50200620f02570c6fee361f71"
+    },
+    {
+      "release_path": "run_rerank_weight_search.py",
+      "release_sha256": "4829a1081a872fde4f6b61bc8bfb606fcb02e8f392a1b7bb4e3388c689cf78dc",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "R4/run_rerank_weight_search.py",
+      "source_sha256": "4829a1081a872fde4f6b61bc8bfb606fcb02e8f392a1b7bb4e3388c689cf78dc"
+    },
+    {
+      "release_path": "run_revision_benchmark.py",
+      "release_sha256": "64898916d611bea611a8a4b768807fcefe99f2d2e8c4874f7c0c4dc89a4e0798",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "alignrag_tcm/run_revision_benchmark.py",
+      "source_sha256": "64898916d611bea611a8a4b768807fcefe99f2d2e8c4874f7c0c4dc89a4e0798"
+    },
+    {
+      "release_path": "run_tcm_alignrag.py",
+      "release_sha256": "dc9cea3b5d5bd8faafa82acf12e8cef6e4d11b5a67cc263d38621e5ae5917ba0",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/run_tcm_alignrag.py",
+      "source_sha256": "dc9cea3b5d5bd8faafa82acf12e8cef6e4d11b5a67cc263d38621e5ae5917ba0"
+    },
+    {
+      "release_path": "run_test111_evicr_qd_ablation.py",
+      "release_sha256": "a61f2662feed144041e0448166fb55a8ded36c2e8b9c397ace99cb76ef1ff220",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "alignrag_tcm/run_test111_evicr_qd_ablation.py",
+      "source_sha256": "a61f2662feed144041e0448166fb55a8ded36c2e8b9c397ace99cb76ef1ff220"
+    },
+    {
+      "release_path": "run_test111_ter_structure_ablation.py",
+      "release_sha256": "e279c98f087348e580e3bd27ced532e60b9bd6c469941e1c2077bbe7eddeb157",
+      "classification": "modified_for_publication",
+      "source_location": "alignrag_tcm/run_test111_ter_structure_ablation.py",
+      "source_sha256": "131181c22a0d78674d2c8f9733de958340af789a98510a251c5244224f069bab",
+      "change_note": "Corrected bootstrap to resample paired question indices; renamed interval field to question-level pairing."
+    },
+    {
+      "release_path": "run_three_model_qwen35_replay.py",
+      "release_sha256": "61a9dde08d4a1b41d8a06b54b36e8ec200e2189e820a2b3c554e951e97ea2c9a",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/run_three_model_qwen35_replay.py",
+      "source_sha256": "61a9dde08d4a1b41d8a06b54b36e8ec200e2189e820a2b3c554e951e97ea2c9a"
+    },
+    {
+      "release_path": "run_three_model_wrong_only.py",
+      "release_sha256": "a782a56822a7cec15a2d15645860584a3c162bed127c8c9059a45eeb303372b9",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/run_three_model_wrong_only.py",
+      "source_sha256": "a782a56822a7cec15a2d15645860584a3c162bed127c8c9059a45eeb303372b9"
+    },
+    {
+      "release_path": "run_three_model_wrong_only_memory_v2.py",
+      "release_sha256": "ce4d7835f22a9a31a1e8fdaf21ae21a669a9a0b99433ffa3636653de5703d270",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/run_three_model_wrong_only_memory_v2.py",
+      "source_sha256": "ce4d7835f22a9a31a1e8fdaf21ae21a669a9a0b99433ffa3636653de5703d270"
+    },
+    {
+      "release_path": "run_three_model_wrong_only_memory_v3.py",
+      "release_sha256": "4311ddd2b4f7fa78296da85e073af9c90847782c5bcee71dedd2fe534cd5085c",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/run_three_model_wrong_only_memory_v3.py",
+      "source_sha256": "4311ddd2b4f7fa78296da85e073af9c90847782c5bcee71dedd2fe534cd5085c"
+    },
+    {
+      "release_path": "score_open_qa_ai_judge.py",
+      "release_sha256": "7f4631cada12cc0afb71c92e16cee123f9883e36fd4a626cbc7d21ce0ada4402",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "alignrag_tcm/score_open_qa_ai_judge.py",
+      "source_sha256": "7f4631cada12cc0afb71c92e16cee123f9883e36fd4a626cbc7d21ce0ada4402"
+    },
+    {
+      "release_path": "screen_medical_qa.py",
+      "release_sha256": "e88d876c9d14cea85dd535ffc620e94c795e18ac0787a3c035f91f98921f76f8",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "alignrag_tcm/screen_medical_qa.py",
+      "source_sha256": "e88d876c9d14cea85dd535ffc620e94c795e18ac0787a3c035f91f98921f76f8"
+    },
+    {
+      "release_path": "scripts/check_release.py",
+      "release_sha256": "e2bf014e13a52a4de25e8d869a84ee166fa6b23f6ace7b0d3c8f948cad599a44",
+      "classification": "publication_addition"
+    },
+    {
+      "release_path": "serve_benchmark_memory_control.py",
+      "release_sha256": "fa770a156052c8a6bfdf7b60c5ec09a85e6f651fb94b37e8ad5e97b57e4cc3eb",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/serve_benchmark_memory_control.py",
+      "source_sha256": "fa770a156052c8a6bfdf7b60c5ec09a85e6f651fb94b37e8ad5e97b57e4cc3eb"
+    },
+    {
+      "release_path": "serve_qwen_critic_adapter.py",
+      "release_sha256": "b77316645b4710ac2eaf803cd9a69336c40c5bf02553e76b163d545131ed9f32",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/serve_qwen_critic_adapter.py",
+      "source_sha256": "b77316645b4710ac2eaf803cd9a69336c40c5bf02553e76b163d545131ed9f32"
+    },
+    {
+      "release_path": "serve_single_generator.py",
+      "release_sha256": "b430a559b41cb14da9026f897b026e91e014b5419183e1d8952e2563a90a98ff",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/serve_single_generator.py",
+      "source_sha256": "b430a559b41cb14da9026f897b026e91e014b5419183e1d8952e2563a90a98ff"
+    },
+    {
+      "release_path": "summarize_external_evaluation.py",
+      "release_sha256": "8b52065c959f9c3caaae3c262b3fc5a589568370c3b57966970434b4444589e8",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "alignrag_tcm/summarize_external_evaluation.py",
+      "source_sha256": "8b52065c959f9c3caaae3c262b3fc5a589568370c3b57966970434b4444589e8"
+    },
+    {
+      "release_path": "summarize_multimodel_benchmark.py",
+      "release_sha256": "f87f9390d77c92b33d2748dd72bfdc7d3d0f2bda8d1114629a216d46bb6ae126",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/summarize_multimodel_benchmark.py",
+      "source_sha256": "f87f9390d77c92b33d2748dd72bfdc7d3d0f2bda8d1114629a216d46bb6ae126"
+    },
+    {
+      "release_path": "summarize_qwen35_replay.py",
+      "release_sha256": "1e36fe0f6dd3f5e44a06038d782805888bca8b3d2b760c2fd881435518de0034",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/summarize_qwen35_replay.py",
+      "source_sha256": "1e36fe0f6dd3f5e44a06038d782805888bca8b3d2b760c2fd881435518de0034"
+    },
+    {
+      "release_path": "summarize_ter_wrong_only.py",
+      "release_sha256": "53ee0e9929d92c3f190352175bf5fd29f069aab1696f87eef2f357fa2baefe36",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/summarize_ter_wrong_only.py",
+      "source_sha256": "53ee0e9929d92c3f190352175bf5fd29f069aab1696f87eef2f357fa2baefe36"
+    },
+    {
+      "release_path": "summarize_ter_wrong_only_memory_v2.py",
+      "release_sha256": "94e17f09b29d80701d5c530a8d61fdfa2248800adc6439b6b0e33ae80133efbd",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/summarize_ter_wrong_only_memory_v2.py",
+      "source_sha256": "94e17f09b29d80701d5c530a8d61fdfa2248800adc6439b6b0e33ae80133efbd"
+    },
+    {
+      "release_path": "summarize_ter_wrong_only_memory_v3.py",
+      "release_sha256": "336417eafa77f2b2b97cdbdc3ad4844218c955813aa53dcc9d96a0ae8f3dcab7",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/summarize_ter_wrong_only_memory_v3.py",
+      "source_sha256": "336417eafa77f2b2b97cdbdc3ad4844218c955813aa53dcc9d96a0ae8f3dcab7"
+    },
+    {
+      "release_path": "tests/test_contracts.py",
+      "release_sha256": "077f573ceae92576f43fcebc853d38a6cbcd3fdf8d2edb109c7292828f611f4d",
+      "classification": "modified_for_publication",
+      "source_location": "pre-existing-export/tests/test_contracts.py",
+      "source_sha256": "ab1997a54e79b5cea06fb03da033576bb680a1ad810505aae0fbde2d0c1f1f14",
+      "change_note": "Skip undistributed private dataset case; synthetic contract tests remain active."
+    },
+    {
+      "release_path": "tests/test_dense_chunk_rag.py",
+      "release_sha256": "f7a7aaec185cb28e34b663feed343613f43a0d0e7250b2aa6f10a8f64c9d952e",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "alignrag_tcm/tests/test_dense_chunk_rag.py",
+      "source_sha256": "f7a7aaec185cb28e34b663feed343613f43a0d0e7250b2aa6f10a8f64c9d952e"
+    },
+    {
+      "release_path": "tests/test_evicr_public.py",
+      "release_sha256": "778a35f41e908997d6a5cfb5b7871c35c184ca5afea10797198ee282587fc5ba",
+      "classification": "publication_addition"
+    },
+    {
+      "release_path": "tests/test_generator_adapter.py",
+      "release_sha256": "0e2de69b1e123f6f5e61bfb0e015538f54772982b81b86f89de28364ac7d824d",
+      "classification": "modified_for_publication",
+      "source_location": "pre-existing-export/tests/test_generator_adapter.py",
+      "source_sha256": "5a79bae48e246ec66cffa424543212398a8f59180491ef5468118dd53e35702b",
+      "change_note": "Skip optional GPU/model-serving tests when optional packages are unavailable."
+    },
+    {
+      "release_path": "tests/test_multimodel_benchmark.py",
+      "release_sha256": "f51aa95442a9c8db7c9a75e5b420492e16efcc04724b8bafded4d895bdbb5ec7",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/tests/test_multimodel_benchmark.py",
+      "source_sha256": "f51aa95442a9c8db7c9a75e5b420492e16efcc04724b8bafded4d895bdbb5ec7"
+    },
+    {
+      "release_path": "tests/test_no_rag_baseline.py",
+      "release_sha256": "f2e1ed42244f6f8eeaa209e30adcc7af4c4d8b58b18db37a0a6ce3a7a4d5a2d7",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "alignrag_tcm/tests/test_no_rag_baseline.py",
+      "source_sha256": "f2e1ed42244f6f8eeaa209e30adcc7af4c4d8b58b18db37a0a6ce3a7a4d5a2d7"
+    },
+    {
+      "release_path": "tests/test_qwen35_replay.py",
+      "release_sha256": "cd5baa8107e096c593dea8336c4d1288c0b7dc081d798491b1b37d6aa0fb4d35",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/tests/test_qwen35_replay.py",
+      "source_sha256": "cd5baa8107e096c593dea8336c4d1288c0b7dc081d798491b1b37d6aa0fb4d35"
+    },
+    {
+      "release_path": "tests/test_screen_medical_qa.py",
+      "release_sha256": "43808bbcc787d48b9f1e3c734ebb8bb7b791be3a68d31b16d8c004743b3390c9",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "alignrag_tcm/tests/test_screen_medical_qa.py",
+      "source_sha256": "43808bbcc787d48b9f1e3c734ebb8bb7b791be3a68d31b16d8c004743b3390c9"
+    },
+    {
+      "release_path": "tests/test_ter_conversion.py",
+      "release_sha256": "be66e104bfdc0267200479a66246ef2b4530230577e75f78f9ef2696bdd5590f",
+      "classification": "publication_addition"
+    },
+    {
+      "release_path": "tests/test_ter_wrong_only.py",
+      "release_sha256": "05eb75887abe3fee4b9782022f8579ad8b0eb8aaaf62bb6b5fd1a08427cc657d",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/tests/test_ter_wrong_only.py",
+      "source_sha256": "05eb75887abe3fee4b9782022f8579ad8b0eb8aaaf62bb6b5fd1a08427cc657d"
+    },
+    {
+      "release_path": "tests/test_wrong_only_memory_v2.py",
+      "release_sha256": "62c6de6bfff34b098d9fbb62ae148c1e3aaeffd727302775c73da0da923bb423",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/tests/test_wrong_only_memory_v2.py",
+      "source_sha256": "62c6de6bfff34b098d9fbb62ae148c1e3aaeffd727302775c73da0da923bb423"
+    },
+    {
+      "release_path": "tests/test_wrong_only_memory_v3.py",
+      "release_sha256": "b92098d6a00c4a070ecee4aba4b4a577bcfc3a3a905588b5887f35590e73d929",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/tests/test_wrong_only_memory_v3.py",
+      "source_sha256": "b92098d6a00c4a070ecee4aba4b4a577bcfc3a3a905588b5887f35590e73d929"
+    },
+    {
+      "release_path": "train_critic_lora.py",
+      "release_sha256": "749a64cd81b9fb37e29b45edeebc081af31d5c364f3eaae958341b90f385a3e9",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/train_critic_lora.py",
+      "source_sha256": "749a64cd81b9fb37e29b45edeebc081af31d5c364f3eaae958341b90f385a3e9"
+    },
+    {
+      "release_path": "validate_alignrag_output.py",
+      "release_sha256": "1d2b8bb75ab4d3b31f053dc98a2693b658c485ede725e36c594e1bedf9b2b232",
+      "classification": "source_copy_lf_normalized",
+      "source_location": "pre-existing-export/validate_alignrag_output.py",
+      "source_sha256": "1d2b8bb75ab4d3b31f053dc98a2693b658c485ede725e36c594e1bedf9b2b232"
+    }
+  ]
+}

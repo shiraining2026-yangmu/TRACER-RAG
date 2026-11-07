@@ -1,0 +1,4 @@
+# Lightweight offline contract tests; no models, GPU, torch or API credentials.
+numpy>=1.26
+requests>=2.31
+pytest>=8.0

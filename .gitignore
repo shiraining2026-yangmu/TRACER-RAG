@@ -1,0 +1,59 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+credentials*
+secrets*
+
+# Models, adapters, checkpoints, and generated data
+models/
+models_benchmark/
+runs/
+outputs/
+results/
+questionbank_eval/
+data/
+checkpoints/
+checkpoint-*/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.jsonl
+*.csv
+*.xlsx
+*.xls
+*.sqlite
+*.db
+*.npy
+*.npz
+indexes/
+index/
+*.zip
+*.7z
+*.tar
+*.gz
+*.pdf
+*.docx
+*.tex
+*.drawio
+
+# Explicitly reviewed numeric aggregate search tables only.
+!reproducibility/weight_search/*.csv
+
+# Logs and caches
+*.log
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

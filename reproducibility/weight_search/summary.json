@@ -1,0 +1,622 @@
+{
+  "status": "complete",
+  "selection_protocol": {
+    "selection_split": "dev",
+    "selection_query_count": 115,
+    "primary_metric": "MRR@3",
+    "secondary_metric": "Recall@3",
+    "tie_breaker": "minimum L1 distance from the pre-existing normalized weight vector",
+    "candidate_grid_step": 0.05,
+    "candidate_grid_count": 15982,
+    "constraints": {
+      "bm25_min": 0.1,
+      "dense_min": 0.1,
+      "relation_intent_max": 0.2
+    }
+  },
+  "test_protocol": {
+    "frozen_split": "test",
+    "query_count": 111,
+    "top_k": 3,
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 20261103
+  },
+  "published_baseline_raw_weights": {
+    "bm25": 0.47999998927116394,
+    "dense": 0.3499999940395355,
+    "question_overlap": 0.10000000149011612,
+    "answer_overlap": 0.07000000029802322,
+    "knowledge_overlap": 0.05000000074505806,
+    "relation_intent": 0.05000000074505806
+  },
+  "published_baseline_normalized_weights": {
+    "bm25": 0.43636366724967957,
+    "dense": 0.3181818425655365,
+    "question_overlap": 0.09090910106897354,
+    "answer_overlap": 0.06363637000322342,
+    "knowledge_overlap": 0.04545455053448677,
+    "relation_intent": 0.04545455053448677
+  },
+  "selected_weights": {
+    "bm25": 0.10000000149011612,
+    "dense": 0.15000000596046448,
+    "question_overlap": 0.30000001192092896,
+    "answer_overlap": 0.05000000074505806,
+    "knowledge_overlap": 0.3499999940395355,
+    "relation_intent": 0.05000000074505806
+  },
+  "dev_metrics": {
+    "published_baseline": {
+      "setting": "published_baseline",
+      "recall_at_3": 0.3826086956521739,
+      "mrr_at_3": 0.36376811594202896,
+      "bm25": 0.43636366724967957,
+      "dense": 0.3181818425655365,
+      "question_overlap": 0.09090910106897354,
+      "answer_overlap": 0.06363637000322342,
+      "knowledge_overlap": 0.04545455053448677,
+      "relation_intent": 0.04545455053448677
+    },
+    "selected": {
+      "setting": "selected",
+      "recall_at_3": 0.391304347826087,
+      "mrr_at_3": 0.3768115942028985,
+      "bm25": 0.10000000149011612,
+      "dense": 0.15000000596046448,
+      "question_overlap": 0.30000001192092896,
+      "answer_overlap": 0.05000000074505806,
+      "knowledge_overlap": 0.3499999940395355,
+      "relation_intent": 0.05000000074505806
+    },
+    "no_bm25": {
+      "setting": "no_bm25",
+      "recall_at_3": 0.3826086956521739,
+      "mrr_at_3": 0.3739130434782609,
+      "bm25": 0.0,
+      "dense": 0.1666666716337204,
+      "question_overlap": 0.3333333432674408,
+      "answer_overlap": 0.0555555559694767,
+      "knowledge_overlap": 0.3888888657093048,
+      "relation_intent": 0.0555555559694767
+    },
+    "no_dense": {
+      "setting": "no_dense",
+      "recall_at_3": 0.391304347826087,
+      "mrr_at_3": 0.3768115942028985,
+      "bm25": 0.11764705926179886,
+      "dense": 0.0,
+      "question_overlap": 0.3529411852359772,
+      "answer_overlap": 0.05882352963089943,
+      "knowledge_overlap": 0.4117646813392639,
+      "relation_intent": 0.05882352963089943
+    },
+    "no_local_overlap": {
+      "setting": "no_local_overlap",
+      "recall_at_3": 0.3826086956521739,
+      "mrr_at_3": 0.36376811594202896,
+      "bm25": 0.3333333134651184,
+      "dense": 0.5,
+      "question_overlap": 0.0,
+      "answer_overlap": 0.0,
+      "knowledge_overlap": 0.0,
+      "relation_intent": 0.1666666567325592
+    },
+    "no_relation_intent": {
+      "setting": "no_relation_intent",
+      "recall_at_3": 0.391304347826087,
+      "mrr_at_3": 0.3768115942028985,
+      "bm25": 0.10526315122842789,
+      "dense": 0.15789473056793213,
+      "question_overlap": 0.31578946113586426,
+      "answer_overlap": 0.052631575614213943,
+      "knowledge_overlap": 0.3684210181236267,
+      "relation_intent": 0.0
+    },
+    "sensitivity_bm25_minus20pct": {
+      "setting": "sensitivity_bm25_minus20pct",
+      "recall_at_3": 0.3826086956521739,
+      "mrr_at_3": 0.3739130434782609,
+      "bm25": 0.08163265138864517,
+      "dense": 0.15306121110916138,
+      "question_overlap": 0.30612242221832275,
+      "answer_overlap": 0.05102040618658066,
+      "knowledge_overlap": 0.357142835855484,
+      "relation_intent": 0.05102040618658066
+    },
+    "sensitivity_bm25_plus20pct": {
+      "setting": "sensitivity_bm25_plus20pct",
+      "recall_at_3": 0.391304347826087,
+      "mrr_at_3": 0.37246376811594206,
+      "bm25": 0.11764706671237946,
+      "dense": 0.14705882966518402,
+      "question_overlap": 0.29411765933036804,
+      "answer_overlap": 0.04901960864663124,
+      "knowledge_overlap": 0.343137264251709,
+      "relation_intent": 0.04901960864663124
+    },
+    "sensitivity_dense_minus20pct": {
+      "setting": "sensitivity_dense_minus20pct",
+      "recall_at_3": 0.391304347826087,
+      "mrr_at_3": 0.3768115942028985,
+      "bm25": 0.10309278964996338,
+      "dense": 0.12371134757995605,
+      "question_overlap": 0.30927836894989014,
+      "answer_overlap": 0.05154639482498169,
+      "knowledge_overlap": 0.36082473397254944,
+      "relation_intent": 0.05154639482498169
+    },
+    "sensitivity_dense_plus20pct": {
+      "setting": "sensitivity_dense_plus20pct",
+      "recall_at_3": 0.3826086956521739,
+      "mrr_at_3": 0.3695652173913043,
+      "bm25": 0.09708738327026367,
+      "dense": 0.17475728690624237,
+      "question_overlap": 0.291262149810791,
+      "answer_overlap": 0.048543691635131836,
+      "knowledge_overlap": 0.33980584144592285,
+      "relation_intent": 0.048543691635131836
+    },
+    "sensitivity_question_overlap_minus20pct": {
+      "setting": "sensitivity_question_overlap_minus20pct",
+      "recall_at_3": 0.3826086956521739,
+      "mrr_at_3": 0.3739130434782609,
+      "bm25": 0.10638298094272614,
+      "dense": 0.1595744788646698,
+      "question_overlap": 0.25531914830207825,
+      "answer_overlap": 0.05319149047136307,
+      "knowledge_overlap": 0.3723404109477997,
+      "relation_intent": 0.05319149047136307
+    },
+    "sensitivity_question_overlap_plus20pct": {
+      "setting": "sensitivity_question_overlap_plus20pct",
+      "recall_at_3": 0.391304347826087,
+      "mrr_at_3": 0.3768115942028985,
+      "bm25": 0.09433963149785995,
+      "dense": 0.14150944352149963,
+      "question_overlap": 0.3396226763725281,
+      "answer_overlap": 0.04716981574892998,
+      "knowledge_overlap": 0.33018869161605835,
+      "relation_intent": 0.04716981574892998
+    },
+    "sensitivity_answer_overlap_minus20pct": {
+      "setting": "sensitivity_answer_overlap_minus20pct",
+      "recall_at_3": 0.391304347826087,
+      "mrr_at_3": 0.3768115942028985,
+      "bm25": 0.10101009905338287,
+      "dense": 0.1515151411294937,
+      "question_overlap": 0.3030302822589874,
+      "answer_overlap": 0.04040404036641121,
+      "knowledge_overlap": 0.35353532433509827,
+      "relation_intent": 0.05050504952669144
+    },
+    "sensitivity_answer_overlap_plus20pct": {
+      "setting": "sensitivity_answer_overlap_plus20pct",
+      "recall_at_3": 0.391304347826087,
+      "mrr_at_3": 0.3768115942028985,
+      "bm25": 0.09900990128517151,
+      "dense": 0.14851485192775726,
+      "question_overlap": 0.2970297038555145,
+      "answer_overlap": 0.05940594524145126,
+      "knowledge_overlap": 0.3465346395969391,
+      "relation_intent": 0.049504950642585754
+    },
+    "sensitivity_knowledge_overlap_minus20pct": {
+      "setting": "sensitivity_knowledge_overlap_minus20pct",
+      "recall_at_3": 0.391304347826087,
+      "mrr_at_3": 0.37246376811594206,
+      "bm25": 0.10752688348293304,
+      "dense": 0.16129033267498016,
+      "question_overlap": 0.3225806653499603,
+      "answer_overlap": 0.05376344174146652,
+      "knowledge_overlap": 0.301075279712677,
+      "relation_intent": 0.05376344174146652
+    },
+    "sensitivity_knowledge_overlap_plus20pct": {
+      "setting": "sensitivity_knowledge_overlap_plus20pct",
+      "recall_at_3": 0.3826086956521739,
+      "mrr_at_3": 0.3739130434782609,
+      "bm25": 0.09345795214176178,
+      "dense": 0.14018693566322327,
+      "question_overlap": 0.28037387132644653,
+      "answer_overlap": 0.04672897607088089,
+      "knowledge_overlap": 0.3925234079360962,
+      "relation_intent": 0.04672897607088089
+    },
+    "sensitivity_relation_intent_minus20pct": {
+      "setting": "sensitivity_relation_intent_minus20pct",
+      "recall_at_3": 0.391304347826087,
+      "mrr_at_3": 0.3768115942028985,
+      "bm25": 0.10101009905338287,
+      "dense": 0.1515151411294937,
+      "question_overlap": 0.3030302822589874,
+      "answer_overlap": 0.05050504952669144,
+      "knowledge_overlap": 0.35353532433509827,
+      "relation_intent": 0.04040404036641121
+    },
+    "sensitivity_relation_intent_plus20pct": {
+      "setting": "sensitivity_relation_intent_plus20pct",
+      "recall_at_3": 0.391304347826087,
+      "mrr_at_3": 0.3768115942028985,
+      "bm25": 0.09900990128517151,
+      "dense": 0.14851485192775726,
+      "question_overlap": 0.2970297038555145,
+      "answer_overlap": 0.049504950642585754,
+      "knowledge_overlap": 0.3465346395969391,
+      "relation_intent": 0.05940594524145126
+    }
+  },
+  "test_metrics": {
+    "published_baseline": {
+      "setting": "published_baseline",
+      "recall_at_3": 0.34234234234234234,
+      "mrr_at_3": 0.3213213213213213,
+      "bm25": 0.43636366724967957,
+      "dense": 0.3181818425655365,
+      "question_overlap": 0.09090910106897354,
+      "answer_overlap": 0.06363637000322342,
+      "knowledge_overlap": 0.04545455053448677,
+      "relation_intent": 0.04545455053448677,
+      "selected_minus_setting_recall_at_3": 0.009009009009009028,
+      "selected_minus_setting_mrr_at_3": 0.0015015015015015232,
+      "selected_minus_setting_recall_at_3_ci95": [
+        0.0,
+        0.02702702702702703
+      ],
+      "selected_minus_setting_mrr_at_3_ci95": [
+        -0.0045045045045045045,
+        0.009009009009009009
+      ]
+    },
+    "selected": {
+      "setting": "selected",
+      "recall_at_3": 0.35135135135135137,
+      "mrr_at_3": 0.3228228228228228,
+      "bm25": 0.10000000149011612,
+      "dense": 0.15000000596046448,
+      "question_overlap": 0.30000001192092896,
+      "answer_overlap": 0.05000000074505806,
+      "knowledge_overlap": 0.3499999940395355,
+      "relation_intent": 0.05000000074505806
+    },
+    "no_bm25": {
+      "setting": "no_bm25",
+      "recall_at_3": 0.34234234234234234,
+      "mrr_at_3": 0.3168168168168168,
+      "bm25": 0.0,
+      "dense": 0.1666666716337204,
+      "question_overlap": 0.3333333432674408,
+      "answer_overlap": 0.0555555559694767,
+      "knowledge_overlap": 0.3888888657093048,
+      "relation_intent": 0.0555555559694767,
+      "selected_minus_setting_recall_at_3": 0.009009009009009028,
+      "selected_minus_setting_mrr_at_3": 0.006006006006006037,
+      "selected_minus_setting_recall_at_3_ci95": [
+        0.0,
+        0.02702702702702703
+      ],
+      "selected_minus_setting_mrr_at_3_ci95": [
+        -0.0030030030030030034,
+        0.018018018018018018
+      ]
+    },
+    "no_dense": {
+      "setting": "no_dense",
+      "recall_at_3": 0.36036036036036034,
+      "mrr_at_3": 0.3393393393393393,
+      "bm25": 0.11764705926179886,
+      "dense": 0.0,
+      "question_overlap": 0.3529411852359772,
+      "answer_overlap": 0.05882352963089943,
+      "knowledge_overlap": 0.4117646813392639,
+      "relation_intent": 0.05882352963089943,
+      "selected_minus_setting_recall_at_3": -0.009009009009008973,
+      "selected_minus_setting_mrr_at_3": -0.016516516516516477,
+      "selected_minus_setting_recall_at_3_ci95": [
+        -0.02702702702702703,
+        0.0
+      ],
+      "selected_minus_setting_mrr_at_3_ci95": [
+        -0.042042042042042045,
+        0.0
+      ]
+    },
+    "no_local_overlap": {
+      "setting": "no_local_overlap",
+      "recall_at_3": 0.34234234234234234,
+      "mrr_at_3": 0.3213213213213213,
+      "bm25": 0.3333333134651184,
+      "dense": 0.5,
+      "question_overlap": 0.0,
+      "answer_overlap": 0.0,
+      "knowledge_overlap": 0.0,
+      "relation_intent": 0.1666666567325592,
+      "selected_minus_setting_recall_at_3": 0.009009009009009028,
+      "selected_minus_setting_mrr_at_3": 0.0015015015015015232,
+      "selected_minus_setting_recall_at_3_ci95": [
+        0.0,
+        0.02702702702702703
+      ],
+      "selected_minus_setting_mrr_at_3_ci95": [
+        -0.0045045045045045045,
+        0.009009009009009009
+      ]
+    },
+    "no_relation_intent": {
+      "setting": "no_relation_intent",
+      "recall_at_3": 0.35135135135135137,
+      "mrr_at_3": 0.3228228228228228,
+      "bm25": 0.10526315122842789,
+      "dense": 0.15789473056793213,
+      "question_overlap": 0.31578946113586426,
+      "answer_overlap": 0.052631575614213943,
+      "knowledge_overlap": 0.3684210181236267,
+      "relation_intent": 0.0,
+      "selected_minus_setting_recall_at_3": 0.0,
+      "selected_minus_setting_mrr_at_3": 0.0,
+      "selected_minus_setting_recall_at_3_ci95": [
+        0.0,
+        0.0
+      ],
+      "selected_minus_setting_mrr_at_3_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "sensitivity_bm25_minus20pct": {
+      "setting": "sensitivity_bm25_minus20pct",
+      "recall_at_3": 0.34234234234234234,
+      "mrr_at_3": 0.31981981981981983,
+      "bm25": 0.08163265138864517,
+      "dense": 0.15306121110916138,
+      "question_overlap": 0.30612242221832275,
+      "answer_overlap": 0.05102040618658066,
+      "knowledge_overlap": 0.357142835855484,
+      "relation_intent": 0.05102040618658066,
+      "selected_minus_setting_recall_at_3": 0.009009009009009028,
+      "selected_minus_setting_mrr_at_3": 0.003003003003002991,
+      "selected_minus_setting_recall_at_3_ci95": [
+        0.0,
+        0.02702702702702703
+      ],
+      "selected_minus_setting_mrr_at_3_ci95": [
+        0.0,
+        0.009009009009009009
+      ]
+    },
+    "sensitivity_bm25_plus20pct": {
+      "setting": "sensitivity_bm25_plus20pct",
+      "recall_at_3": 0.35135135135135137,
+      "mrr_at_3": 0.3228228228228228,
+      "bm25": 0.11764706671237946,
+      "dense": 0.14705882966518402,
+      "question_overlap": 0.29411765933036804,
+      "answer_overlap": 0.04901960864663124,
+      "knowledge_overlap": 0.343137264251709,
+      "relation_intent": 0.04901960864663124,
+      "selected_minus_setting_recall_at_3": 0.0,
+      "selected_minus_setting_mrr_at_3": 0.0,
+      "selected_minus_setting_recall_at_3_ci95": [
+        0.0,
+        0.0
+      ],
+      "selected_minus_setting_mrr_at_3_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "sensitivity_dense_minus20pct": {
+      "setting": "sensitivity_dense_minus20pct",
+      "recall_at_3": 0.35135135135135137,
+      "mrr_at_3": 0.3228228228228228,
+      "bm25": 0.10309278964996338,
+      "dense": 0.12371134757995605,
+      "question_overlap": 0.30927836894989014,
+      "answer_overlap": 0.05154639482498169,
+      "knowledge_overlap": 0.36082473397254944,
+      "relation_intent": 0.05154639482498169,
+      "selected_minus_setting_recall_at_3": 0.0,
+      "selected_minus_setting_mrr_at_3": 0.0,
+      "selected_minus_setting_recall_at_3_ci95": [
+        0.0,
+        0.0
+      ],
+      "selected_minus_setting_mrr_at_3_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "sensitivity_dense_plus20pct": {
+      "setting": "sensitivity_dense_plus20pct",
+      "recall_at_3": 0.34234234234234234,
+      "mrr_at_3": 0.3213213213213213,
+      "bm25": 0.09708738327026367,
+      "dense": 0.17475728690624237,
+      "question_overlap": 0.291262149810791,
+      "answer_overlap": 0.048543691635131836,
+      "knowledge_overlap": 0.33980584144592285,
+      "relation_intent": 0.048543691635131836,
+      "selected_minus_setting_recall_at_3": 0.009009009009009028,
+      "selected_minus_setting_mrr_at_3": 0.0015015015015015232,
+      "selected_minus_setting_recall_at_3_ci95": [
+        0.0,
+        0.02702702702702703
+      ],
+      "selected_minus_setting_mrr_at_3_ci95": [
+        -0.0045045045045045045,
+        0.009009009009009009
+      ]
+    },
+    "sensitivity_question_overlap_minus20pct": {
+      "setting": "sensitivity_question_overlap_minus20pct",
+      "recall_at_3": 0.34234234234234234,
+      "mrr_at_3": 0.31981981981981983,
+      "bm25": 0.10638298094272614,
+      "dense": 0.1595744788646698,
+      "question_overlap": 0.25531914830207825,
+      "answer_overlap": 0.05319149047136307,
+      "knowledge_overlap": 0.3723404109477997,
+      "relation_intent": 0.05319149047136307,
+      "selected_minus_setting_recall_at_3": 0.009009009009009028,
+      "selected_minus_setting_mrr_at_3": 0.003003003003002991,
+      "selected_minus_setting_recall_at_3_ci95": [
+        0.0,
+        0.02702702702702703
+      ],
+      "selected_minus_setting_mrr_at_3_ci95": [
+        0.0,
+        0.009009009009009009
+      ]
+    },
+    "sensitivity_question_overlap_plus20pct": {
+      "setting": "sensitivity_question_overlap_plus20pct",
+      "recall_at_3": 0.35135135135135137,
+      "mrr_at_3": 0.3228228228228228,
+      "bm25": 0.09433963149785995,
+      "dense": 0.14150944352149963,
+      "question_overlap": 0.3396226763725281,
+      "answer_overlap": 0.04716981574892998,
+      "knowledge_overlap": 0.33018869161605835,
+      "relation_intent": 0.04716981574892998,
+      "selected_minus_setting_recall_at_3": 0.0,
+      "selected_minus_setting_mrr_at_3": 0.0,
+      "selected_minus_setting_recall_at_3_ci95": [
+        0.0,
+        0.0
+      ],
+      "selected_minus_setting_mrr_at_3_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "sensitivity_answer_overlap_minus20pct": {
+      "setting": "sensitivity_answer_overlap_minus20pct",
+      "recall_at_3": 0.35135135135135137,
+      "mrr_at_3": 0.3228228228228228,
+      "bm25": 0.10101009905338287,
+      "dense": 0.1515151411294937,
+      "question_overlap": 0.3030302822589874,
+      "answer_overlap": 0.04040404036641121,
+      "knowledge_overlap": 0.35353532433509827,
+      "relation_intent": 0.05050504952669144,
+      "selected_minus_setting_recall_at_3": 0.0,
+      "selected_minus_setting_mrr_at_3": 0.0,
+      "selected_minus_setting_recall_at_3_ci95": [
+        0.0,
+        0.0
+      ],
+      "selected_minus_setting_mrr_at_3_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "sensitivity_answer_overlap_plus20pct": {
+      "setting": "sensitivity_answer_overlap_plus20pct",
+      "recall_at_3": 0.35135135135135137,
+      "mrr_at_3": 0.3228228228228228,
+      "bm25": 0.09900990128517151,
+      "dense": 0.14851485192775726,
+      "question_overlap": 0.2970297038555145,
+      "answer_overlap": 0.05940594524145126,
+      "knowledge_overlap": 0.3465346395969391,
+      "relation_intent": 0.049504950642585754,
+      "selected_minus_setting_recall_at_3": 0.0,
+      "selected_minus_setting_mrr_at_3": 0.0,
+      "selected_minus_setting_recall_at_3_ci95": [
+        0.0,
+        0.0
+      ],
+      "selected_minus_setting_mrr_at_3_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "sensitivity_knowledge_overlap_minus20pct": {
+      "setting": "sensitivity_knowledge_overlap_minus20pct",
+      "recall_at_3": 0.35135135135135137,
+      "mrr_at_3": 0.3228228228228228,
+      "bm25": 0.10752688348293304,
+      "dense": 0.16129033267498016,
+      "question_overlap": 0.3225806653499603,
+      "answer_overlap": 0.05376344174146652,
+      "knowledge_overlap": 0.301075279712677,
+      "relation_intent": 0.05376344174146652,
+      "selected_minus_setting_recall_at_3": 0.0,
+      "selected_minus_setting_mrr_at_3": 0.0,
+      "selected_minus_setting_recall_at_3_ci95": [
+        0.0,
+        0.0
+      ],
+      "selected_minus_setting_mrr_at_3_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "sensitivity_knowledge_overlap_plus20pct": {
+      "setting": "sensitivity_knowledge_overlap_plus20pct",
+      "recall_at_3": 0.34234234234234234,
+      "mrr_at_3": 0.31981981981981983,
+      "bm25": 0.09345795214176178,
+      "dense": 0.14018693566322327,
+      "question_overlap": 0.28037387132644653,
+      "answer_overlap": 0.04672897607088089,
+      "knowledge_overlap": 0.3925234079360962,
+      "relation_intent": 0.04672897607088089,
+      "selected_minus_setting_recall_at_3": 0.009009009009009028,
+      "selected_minus_setting_mrr_at_3": 0.003003003003002991,
+      "selected_minus_setting_recall_at_3_ci95": [
+        0.0,
+        0.02702702702702703
+      ],
+      "selected_minus_setting_mrr_at_3_ci95": [
+        0.0,
+        0.009009009009009009
+      ]
+    },
+    "sensitivity_relation_intent_minus20pct": {
+      "setting": "sensitivity_relation_intent_minus20pct",
+      "recall_at_3": 0.35135135135135137,
+      "mrr_at_3": 0.3228228228228228,
+      "bm25": 0.10101009905338287,
+      "dense": 0.1515151411294937,
+      "question_overlap": 0.3030302822589874,
+      "answer_overlap": 0.05050504952669144,
+      "knowledge_overlap": 0.35353532433509827,
+      "relation_intent": 0.04040404036641121,
+      "selected_minus_setting_recall_at_3": 0.0,
+      "selected_minus_setting_mrr_at_3": 0.0,
+      "selected_minus_setting_recall_at_3_ci95": [
+        0.0,
+        0.0
+      ],
+      "selected_minus_setting_mrr_at_3_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "sensitivity_relation_intent_plus20pct": {
+      "setting": "sensitivity_relation_intent_plus20pct",
+      "recall_at_3": 0.35135135135135137,
+      "mrr_at_3": 0.3228228228228228,
+      "bm25": 0.09900990128517151,
+      "dense": 0.14851485192775726,
+      "question_overlap": 0.2970297038555145,
+      "answer_overlap": 0.049504950642585754,
+      "knowledge_overlap": 0.3465346395969391,
+      "relation_intent": 0.05940594524145126,
+      "selected_minus_setting_recall_at_3": 0.0,
+      "selected_minus_setting_mrr_at_3": 0.0,
+      "selected_minus_setting_recall_at_3_ci95": [
+        0.0,
+        0.0
+      ],
+      "selected_minus_setting_mrr_at_3_ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "input_hashes": {
+    "queries": "358299c6afbe2370ada92003d2106e88d4da62de7b924ba71c69ef8f6b782d3d",
+    "index_metadata": "87da26f9dd289baf9cc01723204cc35cb11c28c2d3830504856a31259cfd3bc3"
+  }
+}

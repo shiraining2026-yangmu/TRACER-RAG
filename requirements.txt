@@ -1,0 +1,15 @@
+# Install a CUDA-compatible PyTorch build separately for the target machine.
+torch
+transformers>=4.45
+datasets>=2.20
+peft>=0.12
+accelerate>=0.33
+bitsandbytes>=0.43
+fastapi>=0.110
+uvicorn>=0.29
+pydantic>=2.7
+requests>=2.31
+numpy>=1.26
+sentence-transformers>=3.0
+huggingface-hub>=0.24
+openpyxl>=3.1
