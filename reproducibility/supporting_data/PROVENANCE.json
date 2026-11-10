@@ -1,0 +1,331 @@
+{
+  "release": "TRACER-RAG reviewed numerical supporting data",
+  "prepared_on": "2026-11-10",
+  "source_policy": "Original research files preserved locally; explicit field allowlists used for exports. Paths below are project-relative provenance, not bundled raw data.",
+  "scope": "Archived numeric records and metadata, not new inference or independent clinical validation.",
+  "artifacts": [
+    {
+      "release_path": "archived_exam_correctness.csv",
+      "release_sha256": "535756a6c0df569c8a26caeca0a0065e2579ab6fa9d736ad8ed5b1be280f345e",
+      "rows": 1138,
+      "transformation": "Numeric/identifier-only source table; CSV serialized as UTF-8 with LF. No questions, predictions, answer keys or evidence.",
+      "sources": [
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/experiment1_6_revision_v1/stats/paired_correctness_matrix.csv",
+          "sha256": "de39affc29bf00a4672e45f0a800ee7987e26f309f23c98a724947d0dca7d71b",
+          "bytes": 94450
+        }
+      ]
+    },
+    {
+      "release_path": "archived_paired_statistics_primary.csv",
+      "release_sha256": "74a4eaa418a64398f9cef6a146189d381c59f6318d6c41d4e25b1b260023158b",
+      "rows": 72,
+      "transformation": "Reviewed archived paired statistics; original reported values retained, LF normalized.",
+      "sources": [
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/experiment1_6_revision_v1/stats/paired_statistics.csv",
+          "sha256": "6865d96e58c20510e8a168e7731a01f2b38cb70187f800cb93ef4cb1314c1a34",
+          "bytes": 13036
+        }
+      ]
+    },
+    {
+      "release_path": "archived_paired_statistics_sensitivity.csv",
+      "release_sha256": "5bc3f74f0761774ae5204f7f5ab58619ad3471e15a75055b63260c76dba65ba9",
+      "rows": 72,
+      "transformation": "Reviewed archived paired statistics; original reported values retained, LF normalized.",
+      "sources": [
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/experiment1_6_revision_v1/stats/paired_statistics_all_1138_sensitivity.csv",
+          "sha256": "65a2c235adb2f632b7ee80c0210ec38ec3c0ba2bea0fdf5e7059013ac4fb1d04",
+          "bytes": 13033
+        }
+      ]
+    },
+    {
+      "release_path": "archived_exam_protocol.json",
+      "release_sha256": "6fa505aefd741187fe67ce805cdc6b1201b59c67e710a6588d3c83bdf481ac55",
+      "rows": null,
+      "transformation": "Allowlisted protocol metadata plus explicit scope notes; no source clinical text.",
+      "sources": [
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/experiment1_6_revision_v1/REPORT.md",
+          "sha256": "2671cfb3983de126fa30d29b17b280564b80b1b49d554b55df6c358964ba0eea",
+          "bytes": 1985
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/experiment1_6_revision_v1/stats/stats_manifest.json",
+          "sha256": "9c7d50eb9d3dd39c0871881f573f4c068b3ade42d3c00c48b1723aa03bdecc8b",
+          "bytes": 726
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/experiment1_6_revision_v1/stats/stats_manifest_all_1138_sensitivity.json",
+          "sha256": "e04c49ac3c0893597ef827c9c53ae6a9640f8f69d7b11bf8f5d06e2ed3412bfe",
+          "bytes": 726
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/experiment1_6_revision_v1/model_runs/gemma2_9b_it/manifest.json",
+          "sha256": "1b6fdc33b195eacfafc48a28fd816f271ad747cea6115e5284de0f19d89d14b6",
+          "bytes": 597
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/experiment1_6_revision_v1/model_runs/internlm3_8b_instruct/manifest.json",
+          "sha256": "250abed7b9ee58336a95bc11e5fba768e94aa363bf434ff9d1587ed8508ac6c6",
+          "bytes": 583
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/experiment1_6_revision_v1/model_runs/meta_llama_3_1_8b_instruct/manifest.json",
+          "sha256": "65846d37e6713bef2f20b25069964cfbdde5681f92de165fc74618198dc8a60d",
+          "bytes": 593
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/experiment1_6_revision_v1/model_runs/mistral_7b_instruct_v03/manifest.json",
+          "sha256": "eaee43a1e94d5a6eb881d1f9d2b7db36fa9e418c3d1a209dae5a948d6a1ddcb0",
+          "bytes": 612
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/experiment1_6_revision_v1/model_runs/qwen2_5_7b_instruct/manifest.json",
+          "sha256": "dcf6c363559ce39fa2761952345982d1d1c285e8ed5e0b9c21589f11c61b6efa",
+          "bytes": 579
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/experiment1_6_revision_v1/model_runs/qwen35_9b/manifest.json",
+          "sha256": "8f94db220078405bed79dac742c4ede12d6b57a97a5896ba0045f5b3b332e436",
+          "bytes": 564
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/experiment1_6_revision_v1/model_runs/qwen3_8b/manifest.json",
+          "sha256": "183ecc166badfdf1262c218ff17de76e1567fe424259d563a3ecf0a79fad9851",
+          "bytes": 557
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/experiment1_6_revision_v1/model_runs/yi15_9b_chat/manifest.json",
+          "sha256": "7162b5bafc2ce3df944ca7b39bb41aa1e452a8fe0fcb4fe0aa579aff942084af",
+          "bytes": 597
+        }
+      ]
+    },
+    {
+      "release_path": "structure_assessments.csv",
+      "release_sha256": "8ad4f17a50d4695c1af815f28fbf4bd2d812409fb3f5727c59b9e92aac8fa2ce",
+      "rows": 222,
+      "transformation": "Export only source application ID, arm, status, four categorical ratings and candidate hash. Drop raw assessor output and all source/candidate text.",
+      "sources": [
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/ter_structure_ablation_qwen_base_v1/anonymous_assessment.jsonl",
+          "sha256": "09160a042838f44eff1f74b6e4ee23f65d10a59bc9edbb3666292c9795f42c17",
+          "bytes": 141766
+        }
+      ]
+    },
+    {
+      "release_path": "structure_protocol.json",
+      "release_sha256": "1594f533c4b0418614d8b4cba1c1934080bb2dd967c73da4dd796bf483b6699e",
+      "rows": null,
+      "transformation": "Reviewed aggregate protocol metadata; no text predictions.",
+      "sources": [
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/ter_structure_ablation_qwen_base_v1/manifest.json",
+          "sha256": "1594f533c4b0418614d8b4cba1c1934080bb2dd967c73da4dd796bf483b6699e",
+          "bytes": 1969
+        }
+      ]
+    },
+    {
+      "release_path": "open_qa_ai_scores.csv",
+      "release_sha256": "5340eee7c4e3cbb1b44beea7a87b82b553e531fdb8cae138c4a4b21b80c52578",
+      "rows": 600,
+      "transformation": "Reviewed 300 paired questions / 600 candidate rows, numeric ratings and preference enums only; averaged across two automated judges.",
+      "sources": [
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/strict_ablation_v1/open_qa_ai_judge/paired_open_qa_ai_scores.csv",
+          "sha256": "b4ee8c16c7f6a9cf3fcf78232638556db540fad2e978af3c836d453bee018fad",
+          "bytes": 37131
+        }
+      ]
+    },
+    {
+      "release_path": "open_qa_ai_protocol.json",
+      "release_sha256": "6efff348daa9255357a6de5c02782e2102f02396d969245036d6c656207d318a",
+      "rows": null,
+      "transformation": "Reviewed reciprocal AI assessment summary and limitations; not expert annotations.",
+      "sources": [
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/strict_ablation_v1/open_qa_ai_judge/reciprocal_ai_judge_summary.json",
+          "sha256": "6efff348daa9255357a6de5c02782e2102f02396d969245036d6c656207d318a",
+          "bytes": 2265
+        }
+      ]
+    },
+    {
+      "release_path": "strict_ablation_aggregates.csv",
+      "release_sha256": "49b6f5e1a273eb75621d40e7882e5ed9e9f2a583c0bf2bbcf107e0ea83e4e1bb",
+      "rows": 24,
+      "transformation": "Combine reviewed two-model archived aggregate tables; retain reported intervals/tokens and negative effects. No per-item inference records available in this table.",
+      "sources": [
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/strict_ablation_v1/qwen35/comparison.csv",
+          "sha256": "2d7f294a03dfea301428e78ba896fc49bcdfc41d7df3fbf58e8badd1a8a9953e",
+          "bytes": 1381
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/strict_ablation_v1/mistral/comparison.csv",
+          "sha256": "67ba06776050013e9a3c69fdc0b4042894bf627a345f47b2f274b036712c6f78",
+          "bytes": 1387
+        }
+      ]
+    },
+    {
+      "release_path": "strict_ablation_protocols.json",
+      "release_sha256": "5691540baec7c43192fa0b523449fc2e425c51df088cf8b1ca9509b7aced506a",
+      "rows": null,
+      "transformation": "Allowlisted protocol fields and route audit; explicit distinction between input counts and 1137 scored items.",
+      "sources": [
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/strict_ablation_v1/qwen35/manifest.json",
+          "sha256": "915fa51bd319a0015b7ef120e19304867c118550b484301393e519252fac1152",
+          "bytes": 971
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/strict_ablation_v1/qwen35/summary.json",
+          "sha256": "0f899f6d67de66dd3dedb8246e1b193eff538211b057b69221b821ba179d18a9",
+          "bytes": 36946
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/strict_ablation_v1/mistral/manifest.json",
+          "sha256": "aadfa26671df258e284401d0d5eb9ea609d32cc634c9bfc461f825f986c1640b",
+          "bytes": 972
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/strict_ablation_v1/mistral/summary.json",
+          "sha256": "9a8bba331eee4a3694fe78318d357e242cf0e98d128afbf94c2e7f743768ec26",
+          "bytes": 36970
+        }
+      ]
+    },
+    {
+      "release_path": "external_transfer_aggregates.json",
+      "release_sha256": "759188840d684b2c38db0dac8d3727dc8aca31821f453ea5f1f2440781de2446",
+      "rows": null,
+      "transformation": "Reviewed public benchmark provenance and aggregate transfer metrics; no benchmark/source records or reference answers.",
+      "sources": [
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/strict_ablation_v1/external/qwen35/manifest.json",
+          "sha256": "c710c4c45e22448814945df15e042b368cc2a42946bcbe9b5efdc85ff42fbc95",
+          "bytes": 1743
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/strict_ablation_v1/external/qwen35/summary.json",
+          "sha256": "b52404c4840b768c8b6cf581e5f714f994832dc1a8baa515b83c7f8b03ba5ed2",
+          "bytes": 1310
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/strict_ablation_v1/external/mistral/manifest.json",
+          "sha256": "de5e4a6bd978e9bf394a63fc772fb5960eeb779c8e0c483ecc3a94d802146948",
+          "bytes": 1744
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/strict_ablation_v1/external/mistral/summary.json",
+          "sha256": "0400ff2360d7529e4e646b7edbcb70c6b69e24e4f89e9b1876a8b66168270ee8",
+          "bytes": 1312
+        }
+      ]
+    },
+    {
+      "release_path": "test111_konly_vs_ter_aggregates.json",
+      "release_sha256": "110b94442a1f4deafcdd172548acbcad67b14c35b1755ca30007294111164b92",
+      "rows": null,
+      "transformation": "Reviewed 111-query K-only versus relation evidence aggregate assessment. Per-item judgments not recovered locally; archived intervals retained.",
+      "sources": [
+        {
+          "project_relative_path": "02_代码与实验/R4/aek_baseline_inputs_r2/hybrid_r4_k_only_vs_hybrid_direct_blind_judge_summary.json",
+          "sha256": "110b94442a1f4deafcdd172548acbcad67b14c35b1755ca30007294111164b92",
+          "bytes": 733
+        }
+      ]
+    },
+    {
+      "release_path": "corpus_snapshot.json",
+      "release_sha256": "8b00bb84c26f3d16db2a3096e93784fe934fb3bedb03da487da837fd1aa8ab9f",
+      "rows": null,
+      "transformation": "Retain original metadata and add current byte hashes/counts of local frozen baseline-input files.",
+      "sources": [
+        {
+          "project_relative_path": "02_代码与实验/R4/aek_baseline_inputs_r2/input_manifest.aek.v1.json",
+          "sha256": "0fca226d6d21a40e76fe1b0353815bba3a28ccf24bd9605b38ed73e1c18b11fe",
+          "bytes": 1186
+        },
+        {
+          "project_relative_path": "02_代码与实验/R4/aek_baseline_inputs_r2/applications.aek.v1.jsonl",
+          "sha256": "f09fee9c5a7b4420aae1cd06f25e855a67dab0f7dc6c0f8d674b6ab7257b7f97",
+          "bytes": 46816207
+        },
+        {
+          "project_relative_path": "02_代码与实验/R4/aek_baseline_inputs_r2/knowledge.aek.v1.jsonl",
+          "sha256": "ff3ccfbf01e5828ec24d5e94b29946421a19ce5c8e8392e2990c0bd555bc74cf",
+          "bytes": 109225360
+        },
+        {
+          "project_relative_path": "02_代码与实验/R4/aek_baseline_inputs_r2/build_edges.aek.v1.jsonl",
+          "sha256": "9b311f7ced5bc22c4b918d8e00858a21b7b03e02bec2648782daac7f26f8b23f",
+          "bytes": 11143698
+        },
+        {
+          "project_relative_path": "02_代码与实验/R4/aek_baseline_inputs_r2/evaluation_edges.aek.v1.jsonl",
+          "sha256": "ee7dc9146e14c825b552246dd14502c630babc574814cc508400f88a2df2c10f",
+          "bytes": 131467
+        },
+        {
+          "project_relative_path": "02_代码与实验/R4/aek_baseline_inputs_r2/queries_345.aek.v1.jsonl",
+          "sha256": "358299c6afbe2370ada92003d2106e88d4da62de7b924ba71c69ef8f6b782d3d",
+          "bytes": 158003
+        }
+      ]
+    },
+    {
+      "release_path": "evaluation_query_membership.csv",
+      "release_sha256": "816db864c9e3043b61893dbfac384c9f7654ac7a2c1deef34c473b3af192453d",
+      "rows": 345,
+      "transformation": "Only query IDs, frozen split and relation enums; drop questions and evidence IDs/text.",
+      "sources": [
+        {
+          "project_relative_path": "02_代码与实验/R4/aek_baseline_inputs_r2/queries_345.aek.v1.jsonl",
+          "sha256": "358299c6afbe2370ada92003d2106e88d4da62de7b924ba71c69ef8f6b782d3d",
+          "bytes": 158003
+        }
+      ]
+    },
+    {
+      "release_path": "critic_seed_build_membership.csv",
+      "release_sha256": "33d516fe9ed76a8175c4ac79f501116e279a895b5997629046e8c49f7f939bec",
+      "rows": 3000,
+      "transformation": "Build seed-selection membership only; drop questions, dataset names and record hashes. Does not certify that these exact records trained a released adapter.",
+      "sources": [
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/data/critic_seed_3000.jsonl",
+          "sha256": "906e00c38dbcac69804753d2171f9cfbc204ed8f69128566db0bedc5162a65e8",
+          "bytes": 1547037
+        }
+      ]
+    },
+    {
+      "release_path": "archived_no_rag_vs_dense.csv",
+      "release_sha256": "f7bbef9e4d7a549bf8998e0a42eca3cdbfd71291fb51a9ad3a58061e4a5643a2",
+      "rows": 1138,
+      "transformation": "Filter to jointly scored rows and export ID/year/binary correctness only. Historical Qwen baseline 916 versus 908; a different run from the 8-model revision matrix.",
+      "sources": [
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/no_rag_qwen_v1/grading_2021/no_rag_vs_dense_paired.csv",
+          "sha256": "f3f7d48851710835a4246cf8398521bd0071c08cc0b4c9a72dce25dee0ba1af2",
+          "bytes": 42653
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/no_rag_qwen_v1/grading_2022/no_rag_vs_dense_paired.csv",
+          "sha256": "6674cee50d8ae7617d1b6bf747cf719f86f60cef19bcfd5bcf810d18da199cc6",
+          "bytes": 44980
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "release": "TRACER-RAG code publication package",
+  "release": "TRACER-RAG code and numerical supporting-data publication package",
   "prepared_on": "2026-11-07",
   "source_locations": "Relative project locations, or pre-existing-export for the supplied desktop snapshot",
   "line_endings": "Public text normalized to LF with one final newline; original source hash retains original bytes",
@@ -8,7 +8,8 @@
     "run_evicr.py",
     "paired_statistics.py",
     "examples/offline_demo.py",
-    "scripts/check_release.py"
+    "scripts/check_release.py",
+    "scripts/check_supporting_data.py"
   ],
   "self_hash_policy": "This manifest and SHA256SUMS.txt are excluded here to avoid recursive hashes; SHA256SUMS covers this manifest.",
   "files": [
@@ -24,32 +25,42 @@
     },
     {
       "release_path": ".github/workflows/checks.yml",
-      "release_sha256": "3f05f9701fcd25ccdc100f366f138dfbc2015ab205eb1e180290328d515e29a9",
-      "classification": "publication_addition"
+      "release_sha256": "c04ed84b361f7f1a210b9549e70653a0a12164532996e54c9959a80424addcea",
+      "classification": "publication_addition",
+      "previous_release_sha256": "3f05f9701fcd25ccdc100f366f138dfbc2015ab205eb1e180290328d515e29a9",
+      "updated_on": "2026-11-10"
     },
     {
       "release_path": ".gitignore",
-      "release_sha256": "bf6c12e9aa4b5fa575501d2da141dec645f7e2d959346714feb3b8762cb8f768",
+      "release_sha256": "5cfcbbeb24fd331a421fffa7f558a13f0d450fc061236a005e85234cd5dc1223",
       "classification": "modified_for_publication",
       "source_location": "pre-existing-export/.gitignore",
-      "source_sha256": "56cc1bd34add2633112049ef7bcf3342d8cf7df417b77758d1a976f008cc6282"
+      "source_sha256": "56cc1bd34add2633112049ef7bcf3342d8cf7df417b77758d1a976f008cc6282",
+      "previous_release_sha256": "bf6c12e9aa4b5fa575501d2da141dec645f7e2d959346714feb3b8762cb8f768",
+      "updated_on": "2026-11-10"
     },
     {
       "release_path": "DATA_AVAILABILITY.md",
-      "release_sha256": "d50364b05278674ec00ee2f1510a74b9c478c09bdea3601e22386c957de1305c",
-      "classification": "publication_addition"
+      "release_sha256": "c0257b7206551f430cdb08b71deb0d8f9eb3270be1fd3be232c791191b4f7645",
+      "classification": "publication_addition",
+      "previous_release_sha256": "d50364b05278674ec00ee2f1510a74b9c478c09bdea3601e22386c957de1305c",
+      "updated_on": "2026-11-10"
     },
     {
       "release_path": "README.md",
-      "release_sha256": "648487362e458f15d8e9142108127bf8836f65b1d3f4eb24e2d78321846e0100",
+      "release_sha256": "a0ae8b6327be961bb4bc8acd153bbcb59593755d954efbf0b930977c177ca34a",
       "classification": "modified_for_publication",
       "source_location": "pre-existing-export/README.md",
-      "source_sha256": "be4a57f7e33ccdd2303745604b125ee0003a852b0eaf06eafd31c3771b972d41"
+      "source_sha256": "be4a57f7e33ccdd2303745604b125ee0003a852b0eaf06eafd31c3771b972d41",
+      "previous_release_sha256": "648487362e458f15d8e9142108127bf8836f65b1d3f4eb24e2d78321846e0100",
+      "updated_on": "2026-11-10"
     },
     {
       "release_path": "README.zh-CN.md",
-      "release_sha256": "53d80e864129ad34aef570bba08bc4bdb83e49fbce1af4c815696c815b046ca6",
-      "classification": "publication_addition"
+      "release_sha256": "1995711a7058115fa6937019153aa696f26f16f76cc8cf36f80457431598a8e6",
+      "classification": "publication_addition",
+      "previous_release_sha256": "53d80e864129ad34aef570bba08bc4bdb83e49fbce1af4c815696c815b046ca6",
+      "updated_on": "2026-11-10"
     },
     {
       "release_path": "RIGHTS.md",
@@ -112,13 +123,17 @@
     },
     {
       "release_path": "docs/RELEASE_SCOPE.md",
-      "release_sha256": "1a068c18396b0d1c97356b1385436f74c2287ebc7debb9382a167f9e71fff3d8",
-      "classification": "publication_addition"
+      "release_sha256": "938b377ca0dfc6bbee192fa3989f5aaf935e722f1f2fdd0e3328e62fb2597523",
+      "classification": "publication_addition",
+      "previous_release_sha256": "1a068c18396b0d1c97356b1385436f74c2287ebc7debb9382a167f9e71fff3d8",
+      "updated_on": "2026-11-10"
     },
     {
       "release_path": "docs/REPRODUCIBILITY.md",
-      "release_sha256": "d6cb10fcd9fb16429209dc00092cdb6aca48ec38d9dfaccce0a34af9fab2147b",
-      "classification": "publication_addition"
+      "release_sha256": "12aa666c91d43e6085b1b8d11a338a36cf655df0083c34eedd9b97469e2b1709",
+      "classification": "publication_addition",
+      "previous_release_sha256": "d6cb10fcd9fb16429209dc00092cdb6aca48ec38d9dfaccce0a34af9fab2147b",
+      "updated_on": "2026-11-10"
     },
     {
       "release_path": "docs/TER_WRONG_ONLY_THREE_MODEL.md",
@@ -307,6 +322,369 @@
       "classification": "source_copy_lf_normalized",
       "source_location": "pre-existing-export/replace_targeted_inference_rows.py",
       "source_sha256": "3a08180b6118dc007d48f220d0d408ab531f06ceddaea7ebf8cf6a601a413aaf"
+    },
+    {
+      "release_path": "reproducibility/supporting_data/DATA_DICTIONARY.md",
+      "classification": "publication_addition",
+      "added_on": "2026-11-10",
+      "release_sha256": "cce69ead30ec8ddf5c002390f6e8b8948b4c556fa3d03cd495a2b2eefe2a488a"
+    },
+    {
+      "release_path": "reproducibility/supporting_data/PROVENANCE.json",
+      "classification": "publication_addition",
+      "added_on": "2026-11-10",
+      "release_sha256": "eaaaf42bab6b9ac8acbfed0a4d7dfb8adc69e1665026b209e3514e595243c35d"
+    },
+    {
+      "release_path": "reproducibility/supporting_data/README.md",
+      "classification": "publication_addition",
+      "added_on": "2026-11-10",
+      "release_sha256": "d60c92ed3caf7f500fb469d08cfd267d299e1a0be7bca37802c74951b8749e08"
+    },
+    {
+      "release_path": "reproducibility/supporting_data/archived_exam_correctness.csv",
+      "classification": "reviewed_supporting_export",
+      "added_on": "2026-11-10",
+      "source_inputs": [
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/experiment1_6_revision_v1/stats/paired_correctness_matrix.csv",
+          "sha256": "de39affc29bf00a4672e45f0a800ee7987e26f309f23c98a724947d0dca7d71b",
+          "bytes": 94450
+        }
+      ],
+      "transformation": "Numeric/identifier-only source table; CSV serialized as UTF-8 with LF. No questions, predictions, answer keys or evidence.",
+      "release_sha256": "535756a6c0df569c8a26caeca0a0065e2579ab6fa9d736ad8ed5b1be280f345e"
+    },
+    {
+      "release_path": "reproducibility/supporting_data/archived_exam_protocol.json",
+      "classification": "reviewed_supporting_export",
+      "added_on": "2026-11-10",
+      "source_inputs": [
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/experiment1_6_revision_v1/REPORT.md",
+          "sha256": "2671cfb3983de126fa30d29b17b280564b80b1b49d554b55df6c358964ba0eea",
+          "bytes": 1985
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/experiment1_6_revision_v1/stats/stats_manifest.json",
+          "sha256": "9c7d50eb9d3dd39c0871881f573f4c068b3ade42d3c00c48b1723aa03bdecc8b",
+          "bytes": 726
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/experiment1_6_revision_v1/stats/stats_manifest_all_1138_sensitivity.json",
+          "sha256": "e04c49ac3c0893597ef827c9c53ae6a9640f8f69d7b11bf8f5d06e2ed3412bfe",
+          "bytes": 726
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/experiment1_6_revision_v1/model_runs/gemma2_9b_it/manifest.json",
+          "sha256": "1b6fdc33b195eacfafc48a28fd816f271ad747cea6115e5284de0f19d89d14b6",
+          "bytes": 597
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/experiment1_6_revision_v1/model_runs/internlm3_8b_instruct/manifest.json",
+          "sha256": "250abed7b9ee58336a95bc11e5fba768e94aa363bf434ff9d1587ed8508ac6c6",
+          "bytes": 583
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/experiment1_6_revision_v1/model_runs/meta_llama_3_1_8b_instruct/manifest.json",
+          "sha256": "65846d37e6713bef2f20b25069964cfbdde5681f92de165fc74618198dc8a60d",
+          "bytes": 593
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/experiment1_6_revision_v1/model_runs/mistral_7b_instruct_v03/manifest.json",
+          "sha256": "eaee43a1e94d5a6eb881d1f9d2b7db36fa9e418c3d1a209dae5a948d6a1ddcb0",
+          "bytes": 612
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/experiment1_6_revision_v1/model_runs/qwen2_5_7b_instruct/manifest.json",
+          "sha256": "dcf6c363559ce39fa2761952345982d1d1c285e8ed5e0b9c21589f11c61b6efa",
+          "bytes": 579
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/experiment1_6_revision_v1/model_runs/qwen35_9b/manifest.json",
+          "sha256": "8f94db220078405bed79dac742c4ede12d6b57a97a5896ba0045f5b3b332e436",
+          "bytes": 564
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/experiment1_6_revision_v1/model_runs/qwen3_8b/manifest.json",
+          "sha256": "183ecc166badfdf1262c218ff17de76e1567fe424259d563a3ecf0a79fad9851",
+          "bytes": 557
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/experiment1_6_revision_v1/model_runs/yi15_9b_chat/manifest.json",
+          "sha256": "7162b5bafc2ce3df944ca7b39bb41aa1e452a8fe0fcb4fe0aa579aff942084af",
+          "bytes": 597
+        }
+      ],
+      "transformation": "Allowlisted protocol metadata plus explicit scope notes; no source clinical text.",
+      "release_sha256": "6fa505aefd741187fe67ce805cdc6b1201b59c67e710a6588d3c83bdf481ac55"
+    },
+    {
+      "release_path": "reproducibility/supporting_data/archived_no_rag_vs_dense.csv",
+      "classification": "reviewed_supporting_export",
+      "added_on": "2026-11-10",
+      "source_inputs": [
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/no_rag_qwen_v1/grading_2021/no_rag_vs_dense_paired.csv",
+          "sha256": "f3f7d48851710835a4246cf8398521bd0071c08cc0b4c9a72dce25dee0ba1af2",
+          "bytes": 42653
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/no_rag_qwen_v1/grading_2022/no_rag_vs_dense_paired.csv",
+          "sha256": "6674cee50d8ae7617d1b6bf747cf719f86f60cef19bcfd5bcf810d18da199cc6",
+          "bytes": 44980
+        }
+      ],
+      "transformation": "Filter to jointly scored rows and export ID/year/binary correctness only. Historical Qwen baseline 916 versus 908; a different run from the 8-model revision matrix.",
+      "release_sha256": "f7bbef9e4d7a549bf8998e0a42eca3cdbfd71291fb51a9ad3a58061e4a5643a2"
+    },
+    {
+      "release_path": "reproducibility/supporting_data/archived_paired_statistics_primary.csv",
+      "classification": "reviewed_supporting_export",
+      "added_on": "2026-11-10",
+      "source_inputs": [
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/experiment1_6_revision_v1/stats/paired_statistics.csv",
+          "sha256": "6865d96e58c20510e8a168e7731a01f2b38cb70187f800cb93ef4cb1314c1a34",
+          "bytes": 13036
+        }
+      ],
+      "transformation": "Reviewed archived paired statistics; original reported values retained, LF normalized.",
+      "release_sha256": "74a4eaa418a64398f9cef6a146189d381c59f6318d6c41d4e25b1b260023158b"
+    },
+    {
+      "release_path": "reproducibility/supporting_data/archived_paired_statistics_sensitivity.csv",
+      "classification": "reviewed_supporting_export",
+      "added_on": "2026-11-10",
+      "source_inputs": [
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/experiment1_6_revision_v1/stats/paired_statistics_all_1138_sensitivity.csv",
+          "sha256": "65a2c235adb2f632b7ee80c0210ec38ec3c0ba2bea0fdf5e7059013ac4fb1d04",
+          "bytes": 13033
+        }
+      ],
+      "transformation": "Reviewed archived paired statistics; original reported values retained, LF normalized.",
+      "release_sha256": "5bc3f74f0761774ae5204f7f5ab58619ad3471e15a75055b63260c76dba65ba9"
+    },
+    {
+      "release_path": "reproducibility/supporting_data/corpus_snapshot.json",
+      "classification": "reviewed_supporting_export",
+      "added_on": "2026-11-10",
+      "source_inputs": [
+        {
+          "project_relative_path": "02_代码与实验/R4/aek_baseline_inputs_r2/input_manifest.aek.v1.json",
+          "sha256": "0fca226d6d21a40e76fe1b0353815bba3a28ccf24bd9605b38ed73e1c18b11fe",
+          "bytes": 1186
+        },
+        {
+          "project_relative_path": "02_代码与实验/R4/aek_baseline_inputs_r2/applications.aek.v1.jsonl",
+          "sha256": "f09fee9c5a7b4420aae1cd06f25e855a67dab0f7dc6c0f8d674b6ab7257b7f97",
+          "bytes": 46816207
+        },
+        {
+          "project_relative_path": "02_代码与实验/R4/aek_baseline_inputs_r2/knowledge.aek.v1.jsonl",
+          "sha256": "ff3ccfbf01e5828ec24d5e94b29946421a19ce5c8e8392e2990c0bd555bc74cf",
+          "bytes": 109225360
+        },
+        {
+          "project_relative_path": "02_代码与实验/R4/aek_baseline_inputs_r2/build_edges.aek.v1.jsonl",
+          "sha256": "9b311f7ced5bc22c4b918d8e00858a21b7b03e02bec2648782daac7f26f8b23f",
+          "bytes": 11143698
+        },
+        {
+          "project_relative_path": "02_代码与实验/R4/aek_baseline_inputs_r2/evaluation_edges.aek.v1.jsonl",
+          "sha256": "ee7dc9146e14c825b552246dd14502c630babc574814cc508400f88a2df2c10f",
+          "bytes": 131467
+        },
+        {
+          "project_relative_path": "02_代码与实验/R4/aek_baseline_inputs_r2/queries_345.aek.v1.jsonl",
+          "sha256": "358299c6afbe2370ada92003d2106e88d4da62de7b924ba71c69ef8f6b782d3d",
+          "bytes": 158003
+        }
+      ],
+      "transformation": "Retain original metadata and add current byte hashes/counts of local frozen baseline-input files.",
+      "release_sha256": "8b00bb84c26f3d16db2a3096e93784fe934fb3bedb03da487da837fd1aa8ab9f"
+    },
+    {
+      "release_path": "reproducibility/supporting_data/critic_seed_build_membership.csv",
+      "classification": "reviewed_supporting_export",
+      "added_on": "2026-11-10",
+      "source_inputs": [
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/data/critic_seed_3000.jsonl",
+          "sha256": "906e00c38dbcac69804753d2171f9cfbc204ed8f69128566db0bedc5162a65e8",
+          "bytes": 1547037
+        }
+      ],
+      "transformation": "Build seed-selection membership only; drop questions, dataset names and record hashes. Does not certify that these exact records trained a released adapter.",
+      "release_sha256": "33d516fe9ed76a8175c4ac79f501116e279a895b5997629046e8c49f7f939bec"
+    },
+    {
+      "release_path": "reproducibility/supporting_data/evaluation_query_membership.csv",
+      "classification": "reviewed_supporting_export",
+      "added_on": "2026-11-10",
+      "source_inputs": [
+        {
+          "project_relative_path": "02_代码与实验/R4/aek_baseline_inputs_r2/queries_345.aek.v1.jsonl",
+          "sha256": "358299c6afbe2370ada92003d2106e88d4da62de7b924ba71c69ef8f6b782d3d",
+          "bytes": 158003
+        }
+      ],
+      "transformation": "Only query IDs, frozen split and relation enums; drop questions and evidence IDs/text.",
+      "release_sha256": "816db864c9e3043b61893dbfac384c9f7654ac7a2c1deef34c473b3af192453d"
+    },
+    {
+      "release_path": "reproducibility/supporting_data/external_transfer_aggregates.json",
+      "classification": "reviewed_supporting_export",
+      "added_on": "2026-11-10",
+      "source_inputs": [
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/strict_ablation_v1/external/qwen35/manifest.json",
+          "sha256": "c710c4c45e22448814945df15e042b368cc2a42946bcbe9b5efdc85ff42fbc95",
+          "bytes": 1743
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/strict_ablation_v1/external/qwen35/summary.json",
+          "sha256": "b52404c4840b768c8b6cf581e5f714f994832dc1a8baa515b83c7f8b03ba5ed2",
+          "bytes": 1310
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/strict_ablation_v1/external/mistral/manifest.json",
+          "sha256": "de5e4a6bd978e9bf394a63fc772fb5960eeb779c8e0c483ecc3a94d802146948",
+          "bytes": 1744
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/strict_ablation_v1/external/mistral/summary.json",
+          "sha256": "0400ff2360d7529e4e646b7edbcb70c6b69e24e4f89e9b1876a8b66168270ee8",
+          "bytes": 1312
+        }
+      ],
+      "transformation": "Reviewed public benchmark provenance and aggregate transfer metrics; no benchmark/source records or reference answers.",
+      "release_sha256": "759188840d684b2c38db0dac8d3727dc8aca31821f453ea5f1f2440781de2446"
+    },
+    {
+      "release_path": "reproducibility/supporting_data/numeric_summary.json",
+      "classification": "publication_addition",
+      "added_on": "2026-11-10",
+      "release_sha256": "7b99527c2e9ca2cb16055838d28dad24fa90c38d59f8ace0ad8299b8a6d1819c"
+    },
+    {
+      "release_path": "reproducibility/supporting_data/open_qa_ai_protocol.json",
+      "classification": "reviewed_supporting_export",
+      "added_on": "2026-11-10",
+      "source_inputs": [
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/strict_ablation_v1/open_qa_ai_judge/reciprocal_ai_judge_summary.json",
+          "sha256": "6efff348daa9255357a6de5c02782e2102f02396d969245036d6c656207d318a",
+          "bytes": 2265
+        }
+      ],
+      "transformation": "Reviewed reciprocal AI assessment summary and limitations; not expert annotations.",
+      "release_sha256": "6efff348daa9255357a6de5c02782e2102f02396d969245036d6c656207d318a"
+    },
+    {
+      "release_path": "reproducibility/supporting_data/open_qa_ai_scores.csv",
+      "classification": "reviewed_supporting_export",
+      "added_on": "2026-11-10",
+      "source_inputs": [
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/strict_ablation_v1/open_qa_ai_judge/paired_open_qa_ai_scores.csv",
+          "sha256": "b4ee8c16c7f6a9cf3fcf78232638556db540fad2e978af3c836d453bee018fad",
+          "bytes": 37131
+        }
+      ],
+      "transformation": "Reviewed 300 paired questions / 600 candidate rows, numeric ratings and preference enums only; averaged across two automated judges.",
+      "release_sha256": "5340eee7c4e3cbb1b44beea7a87b82b553e531fdb8cae138c4a4b21b80c52578"
+    },
+    {
+      "release_path": "reproducibility/supporting_data/strict_ablation_aggregates.csv",
+      "classification": "reviewed_supporting_export",
+      "added_on": "2026-11-10",
+      "source_inputs": [
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/strict_ablation_v1/qwen35/comparison.csv",
+          "sha256": "2d7f294a03dfea301428e78ba896fc49bcdfc41d7df3fbf58e8badd1a8a9953e",
+          "bytes": 1381
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/strict_ablation_v1/mistral/comparison.csv",
+          "sha256": "67ba06776050013e9a3c69fdc0b4042894bf627a345f47b2f274b036712c6f78",
+          "bytes": 1387
+        }
+      ],
+      "transformation": "Combine reviewed two-model archived aggregate tables; retain reported intervals/tokens and negative effects. No per-item inference records available in this table.",
+      "release_sha256": "49b6f5e1a273eb75621d40e7882e5ed9e9f2a583c0bf2bbcf107e0ea83e4e1bb"
+    },
+    {
+      "release_path": "reproducibility/supporting_data/strict_ablation_protocols.json",
+      "classification": "reviewed_supporting_export",
+      "added_on": "2026-11-10",
+      "source_inputs": [
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/strict_ablation_v1/qwen35/manifest.json",
+          "sha256": "915fa51bd319a0015b7ef120e19304867c118550b484301393e519252fac1152",
+          "bytes": 971
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/strict_ablation_v1/qwen35/summary.json",
+          "sha256": "0f899f6d67de66dd3dedb8246e1b193eff538211b057b69221b821ba179d18a9",
+          "bytes": 36946
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/strict_ablation_v1/mistral/manifest.json",
+          "sha256": "aadfa26671df258e284401d0d5eb9ea609d32cc634c9bfc461f825f986c1640b",
+          "bytes": 972
+        },
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/strict_ablation_v1/mistral/summary.json",
+          "sha256": "9a8bba331eee4a3694fe78318d357e242cf0e98d128afbf94c2e7f743768ec26",
+          "bytes": 36970
+        }
+      ],
+      "transformation": "Allowlisted protocol fields and route audit; explicit distinction between input counts and 1137 scored items.",
+      "release_sha256": "5691540baec7c43192fa0b523449fc2e425c51df088cf8b1ca9509b7aced506a"
+    },
+    {
+      "release_path": "reproducibility/supporting_data/structure_assessments.csv",
+      "classification": "reviewed_supporting_export",
+      "added_on": "2026-11-10",
+      "source_inputs": [
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/ter_structure_ablation_qwen_base_v1/anonymous_assessment.jsonl",
+          "sha256": "09160a042838f44eff1f74b6e4ee23f65d10a59bc9edbb3666292c9795f42c17",
+          "bytes": 141766
+        }
+      ],
+      "transformation": "Export only source application ID, arm, status, four categorical ratings and candidate hash. Drop raw assessor output and all source/candidate text.",
+      "release_sha256": "8ad4f17a50d4695c1af815f28fbf4bd2d812409fb3f5727c59b9e92aac8fa2ce"
+    },
+    {
+      "release_path": "reproducibility/supporting_data/structure_protocol.json",
+      "classification": "reviewed_supporting_export",
+      "added_on": "2026-11-10",
+      "source_inputs": [
+        {
+          "project_relative_path": "02_代码与实验/alignrag_tcm/questionbank_eval/ter_structure_ablation_qwen_base_v1/manifest.json",
+          "sha256": "1594f533c4b0418614d8b4cba1c1934080bb2dd967c73da4dd796bf483b6699e",
+          "bytes": 1969
+        }
+      ],
+      "transformation": "Reviewed aggregate protocol metadata; no text predictions.",
+      "release_sha256": "1594f533c4b0418614d8b4cba1c1934080bb2dd967c73da4dd796bf483b6699e"
+    },
+    {
+      "release_path": "reproducibility/supporting_data/test111_konly_vs_ter_aggregates.json",
+      "classification": "reviewed_supporting_export",
+      "added_on": "2026-11-10",
+      "source_inputs": [
+        {
+          "project_relative_path": "02_代码与实验/R4/aek_baseline_inputs_r2/hybrid_r4_k_only_vs_hybrid_direct_blind_judge_summary.json",
+          "sha256": "110b94442a1f4deafcdd172548acbcad67b14c35b1755ca30007294111164b92",
+          "bytes": 733
+        }
+      ],
+      "transformation": "Reviewed 111-query K-only versus relation evidence aggregate assessment. Per-item judgments not recovered locally; archived intervals retained.",
+      "release_sha256": "110b94442a1f4deafcdd172548acbcad67b14c35b1755ca30007294111164b92"
     },
     {
       "release_path": "reproducibility/weight_search/README.md",
@@ -524,8 +902,16 @@
     },
     {
       "release_path": "scripts/check_release.py",
-      "release_sha256": "e2bf014e13a52a4de25e8d869a84ee166fa6b23f6ace7b0d3c8f948cad599a44",
-      "classification": "publication_addition"
+      "release_sha256": "e7303401463d729e191151e8dd26f400398f20a24a81860552a0a447659d30ef",
+      "classification": "publication_addition",
+      "previous_release_sha256": "e2bf014e13a52a4de25e8d869a84ee166fa6b23f6ace7b0d3c8f948cad599a44",
+      "updated_on": "2026-11-10"
+    },
+    {
+      "release_path": "scripts/check_supporting_data.py",
+      "classification": "publication_addition",
+      "added_on": "2026-11-10",
+      "release_sha256": "1c10822a573fcc72ef1deb8dac824875ac7e063ac48b71f83898aac7d902b11a"
     },
     {
       "release_path": "serve_benchmark_memory_control.py",
@@ -686,5 +1072,7 @@
       "source_location": "pre-existing-export/validate_alignrag_output.py",
       "source_sha256": "1d2b8bb75ab4d3b31f053dc98a2693b658c485ede725e36c594e1bedf9b2b232"
     }
-  ]
+  ],
+  "supplemented_on": "2026-11-10",
+  "supplementation": "Reviewed numeric/categorical supporting records and identifier-only membership; raw research text and credentials excluded. Historical routing limitations retained."
 }

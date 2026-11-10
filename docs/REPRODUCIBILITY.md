@@ -96,4 +96,14 @@ This reports combined and per-year paired 2×2 tables, correction/regression cou
 
 ## 7. Release integrity
 
+The numerical supporting records can be checked without private corpora or models:
+
+```bash
+python scripts/check_supporting_data.py
+python scripts/check_supporting_data.py --paired-output outputs/qwen35-archived-pairs.csv --model qwen35_9b --before ter --after evicr
+python paired_statistics.py --input outputs/qwen35-archived-pairs.csv --output outputs/qwen35-archived-statistics.json --draws 10000
+```
+
+The pair export defaults to 1,137 items excluding the known training overlap; add `--all-items` for the 1,138 sensitivity set. These historical EviCR results used answer-key-selected routing. New calculations remain conditional diagnostics, and new bootstrap intervals need not equal archived intervals. See [`supporting-data documentation`](../reproducibility/supporting_data/README.md) for all schemas, score limitations and source hashes.
+
 `SOURCE_MANIFEST.json` distinguishes original scripts from publication utilities and modifications. `SHA256SUMS.txt` covers all tracked content except itself; use `python scripts/check_release.py` to validate syntax, selected secret patterns and checksums. A static scan cannot certify data permissions or detect every possible sensitive value.

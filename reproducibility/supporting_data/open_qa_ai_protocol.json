@@ -1,0 +1,87 @@
+{
+  "version": "open_qa_reciprocal_ai_judges_v1",
+  "analysis_type": "exploratory_reciprocal_ai_judgement_not_expert_annotation",
+  "judge_models": [
+    "strict-qwen35-untuned",
+    "strict-mistral-generator"
+  ],
+  "candidate_models": {
+    "A": "strict-qwen35-generator",
+    "B": "strict-mistral-generator"
+  },
+  "n_questions_in_both_judges": 300,
+  "n_questions_in_input": 300,
+  "n_invalid_or_missing_pairs": 0,
+  "mean_dimension_scores_0_to_2_averaged_across_judges": {
+    "strict-qwen35-generator": {
+      "correctness": 1.7667,
+      "completeness": 1.5108,
+      "safety": 1.835
+    },
+    "strict-mistral-generator": {
+      "correctness": 1.4633,
+      "completeness": 1.2075,
+      "safety": 1.6583
+    }
+  },
+  "paired_difference_B_minus_A_0_to_2": {
+    "correctness": {
+      "mean": -0.3033,
+      "bootstrap_ci95": [
+        -0.3767,
+        -0.2317
+      ]
+    },
+    "completeness": {
+      "mean": -0.3033,
+      "bootstrap_ci95": [
+        -0.3709,
+        -0.2325
+      ]
+    },
+    "safety": {
+      "mean": -0.1767,
+      "bootstrap_ci95": [
+        -0.23,
+        -0.1233
+      ]
+    }
+  },
+  "paired_composite_B_minus_A_0_to_2": {
+    "mean": -0.2611,
+    "bootstrap_ci95": [
+      -0.3161,
+      -0.205
+    ],
+    "exact_two_sided_sign_test_p_excluding_ties": 3.7913746880317927e-17,
+    "positive": 61,
+    "negative": 193,
+    "ties": 46
+  },
+  "preference_counts_by_judge": {
+    "strict-qwen35-untuned": {
+      "strict-qwen35-generator": 116,
+      "strict-mistral-generator": 114,
+      "tie": 57,
+      "neither": 13
+    },
+    "strict-mistral-generator": {
+      "strict-qwen35-generator": 117,
+      "strict-mistral-generator": 41,
+      "tie": 141,
+      "neither": 1
+    }
+  },
+  "bootstrap": {
+    "unit": "question",
+    "draws": 10000,
+    "interval": "percentile 95%",
+    "seed": 20261023
+  },
+  "limitations": [
+    "Both judges are also candidate generators; reciprocal scoring reduces but does not remove self-preference bias.",
+    "AI ratings are exploratory and are not expert or clinical assessments.",
+    "Judges saw the public reference answer; reference incompleteness may affect ratings.",
+    "Public MedQuAD pretraining exposure cannot be ruled out; no patient-specific advice should be inferred."
+  ]
+}

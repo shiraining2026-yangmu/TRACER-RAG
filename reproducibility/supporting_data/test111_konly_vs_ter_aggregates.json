@@ -1,0 +1,26 @@
+{
+  "status": "complete",
+  "judged_rows": 111,
+  "evaluated_split": "test",
+  "split_result": {
+    "queries": 111,
+    "modes": {
+      "k_only": {
+        "overall_pass_count": 15,
+        "overall_pass_rate": 0.13513513513513514,
+        "unsupported_rate": 0.1891891891891892
+      },
+      "rag_plus": {
+        "overall_pass_count": 45,
+        "overall_pass_rate": 0.40540540540540543,
+        "unsupported_rate": 0.23423423423423423
+      }
+    },
+    "rag_plus_minus_k_only": {
+      "point_estimate": 0.2702702702702703,
+      "ci95_lower": 0.15315315315315314,
+      "ci95_upper": 0.38738738738738737
+    }
+  },
+  "caveat": "Blind LLM evidence-grounding pre-evaluation only; not clinical correctness or expert review."
+}

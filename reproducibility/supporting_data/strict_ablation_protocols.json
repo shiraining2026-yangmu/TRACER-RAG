@@ -1,0 +1,144 @@
+{
+  "qwen35": {
+    "archived_manifest": {
+      "status": "complete",
+      "version": "strict_ablation_v1",
+      "models": {
+        "generator": "strict-qwen35-generator",
+        "tuned_critic": "strict-qwen35-tuned",
+        "untuned_critic": "strict-qwen35-untuned"
+      },
+      "years": {
+        "2021": {
+          "rows": 566,
+          "scored": 554
+        },
+        "2022": {
+          "rows": 596,
+          "scored": 584
+        }
+      },
+      "arms": [
+        "tuned_critic",
+        "evicr_tuned"
+      ],
+      "batch_size": 4,
+      "answer_max_tokens": 32,
+      "answer_critic_max_tokens": 384,
+      "evidence_critic_max_tokens": 640,
+      "temperature": 0.0,
+      "invalid_choice_policy": "default_a",
+      "evidence_route": "evicr_tuned=wrong_y1_only_preserve_y1_correct",
+      "answer_key_used_for_model_input": false,
+      "source_sha256": {
+        "2021": "22fd50c0992b2ac2e93a425e0d80784f31a38e746fe9825e3b664e9bcef98d66",
+        "2022": "232296c61f48ded8e042f07055da25fd6c1edcd9666f61686c3201d6308e03f5"
+      },
+      "runner_sha256": "6475920091a1faf0b15b5b1729b0d6c9d51b40e4809a4c7e9c12bb229a325f31"
+    },
+    "effective_scored": {
+      "2021": 554,
+      "2022": 583,
+      "combined": 1137
+    },
+    "known_training_overlap_exclusion": {
+      "excluded_application_ids": [
+        "QB-2022-TCM-03-080"
+      ],
+      "excluded_from_scoring_and_expert_sampling": true,
+      "raw_predictions_preserved": true
+    },
+    "paired_inference": {
+      "ci": "95% percentile bootstrap, 2000 resamples",
+      "resampling_unit": "shared_option_group; singleton questions otherwise",
+      "singleton_test": "two-sided exact McNemar on unclustered questions only",
+      "clustered_questions_test": "cluster bootstrap confidence interval; no cluster-adjusted McNemar p-value"
+    },
+    "evidence_refinement_route_audit": {
+      "2021": {
+        "rows": 566,
+        "y1_wrong_routed_to_evidence_critic": 115,
+        "y1_correct_preserved": 439,
+        "unscored_preserved": 12
+      },
+      "2022": {
+        "rows": 596,
+        "y1_wrong_routed_to_evidence_critic": 128,
+        "y1_correct_preserved": 456,
+        "unscored_preserved": 12
+      }
+    },
+    "interpretation": "evicr_tuned uses answer-key-selected wrong-y1 routing and preserves correct y1. It is not a full-set blind evidence-only ablation."
+  },
+  "mistral": {
+    "archived_manifest": {
+      "status": "complete",
+      "version": "strict_ablation_v1",
+      "models": {
+        "generator": "strict-mistral-generator",
+        "tuned_critic": "strict-qwen35-tuned",
+        "untuned_critic": "strict-qwen35-untuned"
+      },
+      "years": {
+        "2021": {
+          "rows": 566,
+          "scored": 554
+        },
+        "2022": {
+          "rows": 596,
+          "scored": 584
+        }
+      },
+      "arms": [
+        "tuned_critic",
+        "evicr_tuned"
+      ],
+      "batch_size": 4,
+      "answer_max_tokens": 32,
+      "answer_critic_max_tokens": 384,
+      "evidence_critic_max_tokens": 640,
+      "temperature": 0.0,
+      "invalid_choice_policy": "default_a",
+      "evidence_route": "evicr_tuned=wrong_y1_only_preserve_y1_correct",
+      "answer_key_used_for_model_input": false,
+      "source_sha256": {
+        "2021": "b3203c8fc0aa5625dc20c67a3e65d8a2308586c6f62721b6f233cd702701a995",
+        "2022": "79ab9dd710f5911c9afca91371383c532571c127bb3f131c90ae7a2f0b17ba57"
+      },
+      "runner_sha256": "6475920091a1faf0b15b5b1729b0d6c9d51b40e4809a4c7e9c12bb229a325f31"
+    },
+    "effective_scored": {
+      "2021": 554,
+      "2022": 583,
+      "combined": 1137
+    },
+    "known_training_overlap_exclusion": {
+      "excluded_application_ids": [
+        "QB-2022-TCM-03-080"
+      ],
+      "excluded_from_scoring_and_expert_sampling": true,
+      "raw_predictions_preserved": true
+    },
+    "paired_inference": {
+      "ci": "95% percentile bootstrap, 2000 resamples",
+      "resampling_unit": "shared_option_group; singleton questions otherwise",
+      "singleton_test": "two-sided exact McNemar on unclustered questions only",
+      "clustered_questions_test": "cluster bootstrap confidence interval; no cluster-adjusted McNemar p-value"
+    },
+    "evidence_refinement_route_audit": {
+      "2021": {
+        "rows": 566,
+        "y1_wrong_routed_to_evidence_critic": 322,
+        "y1_correct_preserved": 232,
+        "unscored_preserved": 12
+      },
+      "2022": {
+        "rows": 596,
+        "y1_wrong_routed_to_evidence_critic": 344,
+        "y1_correct_preserved": 240,
+        "unscored_preserved": 12
+      }
+    },
+    "interpretation": "evicr_tuned uses answer-key-selected wrong-y1 routing and preserves correct y1. It is not a full-set blind evidence-only ablation."
+  }
+}

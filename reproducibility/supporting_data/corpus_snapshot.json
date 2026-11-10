@@ -1,0 +1,60 @@
+{
+  "archived_input_manifest": {
+    "version": "aek-baseline-inputs-r1",
+    "split_policy": "SHA-256(application_id), 70% Build / 15% Dev / 15% Test",
+    "evaluation": "345 deterministic queries: Build 119, Dev 115, Test 111; labels select metrics only and are not inserted into RAG+.",
+    "retrieval_contract": {
+      "k_only": "all AEK K passages",
+      "a_only": "Build A passages only, excluding current application ID",
+      "rag_plus": "Build A-K E pairs only, excluding current application ID",
+      "dev_test_a_e": "never indexed for A-only or RAG+"
+    },
+    "counts": {
+      "applications": 44677,
+      "split_applications": {
+        "build": 31305,
+        "dev": 6787,
+        "test": 6585
+      },
+      "knowledge": 142089,
+      "all_edges": 87945,
+      "build_edges": 61749,
+      "queries": 345,
+      "query_splits": {
+        "build": 119,
+        "dev": 115,
+        "test": 111
+      },
+      "evaluation_edges": 689
+    },
+    "input_sha256": {
+      "applications": "a166816b397718b9e361001533c196d8a6cf434a7180a1573c2eea6d97a8f07c",
+      "knowledge": "cc883c9d9832deb51542a95fb587c4243fef0f9ef39982b88e6589718ebba232",
+      "edges": "9a73390bd037b578f96a35985cf060a8b4887b5d998e6d4b24e95193fa50433d"
+    }
+  },
+  "frozen_local_snapshot_files": {
+    "applications.aek.v1.jsonl": {
+      "rows": 44677,
+      "sha256": "f09fee9c5a7b4420aae1cd06f25e855a67dab0f7dc6c0f8d674b6ab7257b7f97"
+    },
+    "knowledge.aek.v1.jsonl": {
+      "rows": 142089,
+      "sha256": "ff3ccfbf01e5828ec24d5e94b29946421a19ce5c8e8392e2990c0bd555bc74cf"
+    },
+    "build_edges.aek.v1.jsonl": {
+      "rows": 61749,
+      "sha256": "9b311f7ced5bc22c4b918d8e00858a21b7b03e02bec2648782daac7f26f8b23f"
+    },
+    "evaluation_edges.aek.v1.jsonl": {
+      "rows": 689,
+      "sha256": "ee7dc9146e14c825b552246dd14502c630babc574814cc508400f88a2df2c10f"
+    },
+    "queries_345.aek.v1.jsonl": {
+      "rows": 345,
+      "sha256": "358299c6afbe2370ada92003d2106e88d4da62de7b924ba71c69ef8f6b782d3d"
+    }
+  },
+  "hash_note": "Hashes under archived_input_manifest.input_sha256 refer to its historical inputs. frozen_local_snapshot_files hashes were recomputed from the archived baseline-input files; the two namespaces must not be conflated.",
+  "redistribution": "Only counts, hashes and membership metadata are published; no underlying A/K text or source narratives."
+}

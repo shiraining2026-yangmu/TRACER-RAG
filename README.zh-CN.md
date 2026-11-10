@@ -27,6 +27,7 @@ Python 3.10+：
 python examples/offline_demo.py --output-dir outputs/demo
 pip install -r requirements-test.txt
 python -m pytest -q
+python scripts/check_supporting_data.py
 python scripts/check_release.py
 ```
 
@@ -41,9 +42,10 @@ python scripts/check_release.py
 - 任意规模的完整 Test 推理入口 `run_evicr.py`；禁用知识补充时复用同一份 Critic 输出。
 - 证据忠实性评估脚本、配对统计、合成样例、自动测试与发布检查。
 - 已核查的 Dev 权重搜索汇总，以及源文件/修改记录和校验和。
+- [数值支持数据](reproducibility/supporting_data/README.md)：8 个模型在 1,138 题上的正确性矩阵、222 条结构消融评分、600 条开放问答 AI 评分、消融/外部评估汇总、345 条查询和 3,000 条 Build 种子的成员记录、语料规模及哈希；附字段说明与复核脚本。
 
 保留的回答感知 Critic 和错题定向修复脚本已在[代码索引](docs/CODE_STRUCTURE.md)标为历史流程，不能当作当前 EviCR 的正式入口。历史上用答案键挑选错题的结果属于条件性修复诊断，不能直接解释为盲测全量增益。
 
-仓库未包含原始病例、原始题库、答案键、逐题输出、SFT 数据、模型/Adapter、密钥、论文未公开稿或审稿材料。因而这是代码与复现流程发布，并非所有论文数值的一键完整复现包。脚本可运行、单元测试通过与实验有效性是不同结论；尚未核验的实验不标为已完成。参见[数据说明](DATA_AVAILABILITY.md)、[发布范围](docs/RELEASE_SCOPE.md)和[权利说明](RIGHTS.md)。
+逐题二元正确性可用于复算计数和配对统计；原始病例、原始题库、答案键、逐题回答原文、SFT 数据、模型/Adapter、密钥、论文未公开稿或审稿材料不在仓库中。1,137 题的排除重叠版本与 1,138 题的敏感性版本分别保留，自动评分明确标注为模型评价。因此本仓库并非所有论文数值的一键完整复现包。脚本可运行、单元测试通过与实验有效性是不同结论；尚未核验的实验不标为已完成。参见[数据说明](DATA_AVAILABILITY.md)、[发布范围](docs/RELEASE_SCOPE.md)和[权利说明](RIGHTS.md)。
 
 尚未指定软件复用许可证；模型及数据各自的使用条款仍须遵守。该代码用于研究，不是经过临床验证的诊疗工具。

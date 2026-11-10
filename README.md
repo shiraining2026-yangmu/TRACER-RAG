@@ -38,6 +38,7 @@ For automated checks:
 ```bash
 pip install -r requirements-test.txt
 python -m pytest -q
+python scripts/check_supporting_data.py
 python scripts/check_release.py
 ```
 
@@ -56,9 +57,13 @@ Commands, required input schemas, service configuration and experiment boundarie
 
 ## Results and provenance
 
-The release includes reviewed **aggregate Dev weight-search results**, with input hashes and selection rules, under [`reproducibility/weight_search`](reproducibility/weight_search/README.md). Source files and publication-package changes are recorded in [`SOURCE_MANIFEST.json`](reproducibility/SOURCE_MANIFEST.json); [`SHA256SUMS.txt`](SHA256SUMS.txt) binds the released files.
+The release includes reviewed **aggregate Dev weight-search results**, with input hashes and selection rules, under [`reproducibility/weight_search`](reproducibility/weight_search/README.md).
 
-This is a code release, not a self-contained reproduction of every manuscript number. Private corpora, adapter weights and per-question outcomes are not bundled. Synthetic smoke tests establish software contracts; they do not establish clinical accuracy or experimental efficacy. The presence of an experiment runner does not establish that the experiment finished or that its result was positive.
+The [numerical supporting-data package](reproducibility/supporting_data/README.md) adds 1,138-question correctness records for eight models, 222 structure-ablation assessments, 600 reciprocal AI-score rows, archived ablation/transfer aggregates, frozen query/Build-seed membership and corpus hashes. It includes a field dictionary, source provenance and a standard-library checker. Historical answer-key-selected EviCR results are explicitly labeled **conditional repair diagnostics**; AI scores are not expert assessments. Primary 1,137-item and all-1,138 sensitivity analyses are kept distinct.
+
+Source files and publication-package changes are recorded in [`SOURCE_MANIFEST.json`](reproducibility/SOURCE_MANIFEST.json); [`SHA256SUMS.txt`](SHA256SUMS.txt) binds the released files.
+
+This is not a self-contained reproduction of every manuscript number. Raw corpora, text predictions and adapter weights are not bundled. Correctness records permit numerical checks but cannot independently verify grading or evidence support. Synthetic smoke tests establish software contracts; they do not establish clinical accuracy or experimental efficacy. The presence of an experiment runner does not establish that the experiment finished or that its result was positive.
 
 ## Historical code
 

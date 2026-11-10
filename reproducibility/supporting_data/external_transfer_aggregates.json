@@ -1,0 +1,156 @@
+{
+  "qwen35": {
+    "protocol": {
+      "version": "external_transfer_v1",
+      "model": "strict-qwen35-generator",
+      "cmexam": {
+        "source_sha256": "f618d52d8ca700471a86202d6b3c8e2ae6505f48e9bd290f63589b4a3ce1f74b",
+        "commit": "a4aaeb2d9bc021bb358f45803776f5fe6a06ebe9",
+        "repository": "https://huggingface.co/datasets/fzkuji/CMExam",
+        "citation": "Liu et al., Benchmarking Large Language Models on CMExam, arXiv:2306.03030 (2023)",
+        "license_note": "Dataset card states Apache-2.0 for this unofficial preprocessing and research-only/non-commercial use; verify original-source terms before redistribution.",
+        "sample_size": 500,
+        "exact_overlap_excluded": 12,
+        "exclusion_source_sha256": [
+          "7c092723dca4ca22298d8abbf44769d9d7e3edd0812bd26e5463fae909dc2484",
+          "35ce1d8175c2de34ecb2e2bc86f81d27cb3c49c13c6faf64e53e94a6131cb9b0"
+        ],
+        "selection": "exclude normalized exact overlap then sha256 stable ranking"
+      },
+      "medquad": {
+        "source_sha256": "fbec65999f00293faabc7c00545ccc301aa5adc2525873a737c400c34b853859",
+        "commit": "5b0961fbaa6d7f9c344c5d59c29943fb900c2eca",
+        "repository": "https://huggingface.co/datasets/keivalya/MedQuad-MedicalQnADataset",
+        "citation": "Ben Abacha and Demner-Fushman, A Question-Entailment Approach to Question Answering, BMC Bioinformatics (2019)",
+        "license_note": "No explicit license was present in the dataset card/repository metadata; restrict use to research evaluation and do not redistribute source records pending rights confirmation.",
+        "sample_size": 300,
+        "selection": "sha256 stable ranking"
+      },
+      "reference_in_prompt": false,
+      "batch_size": 4,
+      "pretraining_contamination_not_ruled_out": true,
+      "test_split_used": "CMExam test.json only; no train/validation rows used"
+    },
+    "summary": {
+      "version": "external_transfer_summary_v1",
+      "model": "strict-qwen35-generator",
+      "cmexam": {
+        "rows": 500,
+        "correct": 396,
+        "accuracy_percent": 79.2,
+        "choice_parse_failures": 0
+      },
+      "medquad": {
+        "rows": 300,
+        "rouge_l_mean": 0.146578,
+        "rouge_l_median": 0.146939,
+        "automatic_reference_overlap_only": true
+      },
+      "evidence_fidelity": {
+        "status": "not_measured",
+        "reason": "External tasks were direct transfer evaluations without a frozen evidence corpus."
+      },
+      "pretraining_contamination": {
+        "status": "not_ruled_out",
+        "interpretation": "Public benchmark split and public QA sources may have appeared in pretraining; results are transfer evidence, not contamination-proof generalization."
+      },
+      "expert_evaluation": {
+        "status": "annotation_template_required",
+        "not_claimed": true
+      },
+      "cost_evaluation": {
+        "status": "token_and_elapsed_reported",
+        "monetary_cost": null,
+        "reason": "No user-specified local GPU tariff was supplied; monetary cost is not imputed."
+      },
+      "usage": {
+        "prompt_tokens": 80588,
+        "completion_tokens": 58431,
+        "repair_prompt_tokens": 0,
+        "repair_completion_tokens": 0,
+        "elapsed_seconds_reported": 937.332
+      },
+      "choice_format_audit": {
+        "forced_default_A": 0,
+        "format_repaired": 0
+      }
+    }
+  },
+  "mistral": {
+    "protocol": {
+      "version": "external_transfer_v1",
+      "model": "strict-mistral-generator",
+      "cmexam": {
+        "source_sha256": "f618d52d8ca700471a86202d6b3c8e2ae6505f48e9bd290f63589b4a3ce1f74b",
+        "commit": "a4aaeb2d9bc021bb358f45803776f5fe6a06ebe9",
+        "repository": "https://huggingface.co/datasets/fzkuji/CMExam",
+        "citation": "Liu et al., Benchmarking Large Language Models on CMExam, arXiv:2306.03030 (2023)",
+        "license_note": "Dataset card states Apache-2.0 for this unofficial preprocessing and research-only/non-commercial use; verify original-source terms before redistribution.",
+        "sample_size": 500,
+        "exact_overlap_excluded": 12,
+        "exclusion_source_sha256": [
+          "7c092723dca4ca22298d8abbf44769d9d7e3edd0812bd26e5463fae909dc2484",
+          "35ce1d8175c2de34ecb2e2bc86f81d27cb3c49c13c6faf64e53e94a6131cb9b0"
+        ],
+        "selection": "exclude normalized exact overlap then sha256 stable ranking"
+      },
+      "medquad": {
+        "source_sha256": "fbec65999f00293faabc7c00545ccc301aa5adc2525873a737c400c34b853859",
+        "commit": "5b0961fbaa6d7f9c344c5d59c29943fb900c2eca",
+        "repository": "https://huggingface.co/datasets/keivalya/MedQuad-MedicalQnADataset",
+        "citation": "Ben Abacha and Demner-Fushman, A Question-Entailment Approach to Question Answering, BMC Bioinformatics (2019)",
+        "license_note": "No explicit license was present in the dataset card/repository metadata; restrict use to research evaluation and do not redistribute source records pending rights confirmation.",
+        "sample_size": 300,
+        "selection": "sha256 stable ranking"
+      },
+      "reference_in_prompt": false,
+      "batch_size": 4,
+      "pretraining_contamination_not_ruled_out": true,
+      "test_split_used": "CMExam test.json only; no train/validation rows used"
+    },
+    "summary": {
+      "version": "external_transfer_summary_v1",
+      "model": "strict-mistral-generator",
+      "cmexam": {
+        "rows": 500,
+        "correct": 149,
+        "accuracy_percent": 29.8,
+        "choice_parse_failures": 0
+      },
+      "medquad": {
+        "rows": 300,
+        "rouge_l_mean": 0.168481,
+        "rouge_l_median": 0.163934,
+        "automatic_reference_overlap_only": true
+      },
+      "evidence_fidelity": {
+        "status": "not_measured",
+        "reason": "External tasks were direct transfer evaluations without a frozen evidence corpus."
+      },
+      "pretraining_contamination": {
+        "status": "not_ruled_out",
+        "interpretation": "Public benchmark split and public QA sources may have appeared in pretraining; results are transfer evidence, not contamination-proof generalization."
+      },
+      "expert_evaluation": {
+        "status": "annotation_template_required",
+        "not_claimed": true
+      },
+      "cost_evaluation": {
+        "status": "token_and_elapsed_reported",
+        "monetary_cost": null,
+        "reason": "No user-specified local GPU tariff was supplied; monetary cost is not imputed."
+      },
+      "usage": {
+        "prompt_tokens": 111635,
+        "completion_tokens": 59846,
+        "repair_prompt_tokens": 0,
+        "repair_completion_tokens": 0,
+        "elapsed_seconds_reported": 704.851
+      },
+      "choice_format_audit": {
+        "forced_default_A": 0,
+        "format_repaired": 0
+      }
+    }
+  }
+}

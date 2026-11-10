@@ -1,0 +1,58 @@
+{
+  "status": "complete",
+  "version": "test111-ter-structure-ablation-v1",
+  "n_questions": 111,
+  "generator_model": "qwen-base-ter-structure-v1",
+  "source_sha256": "03fd1a2b6f3abc2b221770a84b066daccb8b0a07d19bbb0ef13d29cdde2c2d8a",
+  "frozen_top3": true,
+  "arms": {
+    "ter_full": "E ID + relation label + historical question/answer + K knowledge boundaries",
+    "ter_flat": "same ordered source text, with relation labels and A/K boundaries removed"
+  },
+  "answer_key_used_for_model_input": false,
+  "automated_assessment": {
+    "model": "qwen-base-ter-structure-v1",
+    "independent_from_generator": false,
+    "note": "Same-model-family assessment must not be described as an independent expert evaluation.",
+    "metrics": {
+      "strict_evidence_support": {
+        "ter_full_rate": 0.9279279279279279,
+        "ter_flat_rate": 0.9099099099099099,
+        "full_minus_flat": 0.018018018018018018,
+        "full_minus_flat_ci95_cluster_bootstrap": [
+          -0.05405405405405406,
+          0.09009009009009009
+        ]
+      },
+      "unsupported_expansion": {
+        "ter_full_rate": 0.02702702702702703,
+        "ter_flat_rate": 0.06306306306306306,
+        "full_minus_flat": -0.036036036036036036,
+        "full_minus_flat_ci95_cluster_bootstrap": [
+          -0.09009009009009009,
+          0.018018018018018018
+        ]
+      },
+      "historical_case_misuse": {
+        "ter_full_rate": 0.0,
+        "ter_flat_rate": 0.0,
+        "full_minus_flat": 0.0,
+        "full_minus_flat_ci95_cluster_bootstrap": [
+          0.0,
+          0.0
+        ]
+      },
+      "key_condition_omission": {
+        "ter_full_rate": 0.02702702702702703,
+        "ter_flat_rate": 0.06306306306306306,
+        "full_minus_flat": -0.036036036036036036,
+        "full_minus_flat_ci95_cluster_bootstrap": [
+          -0.09009009009009009,
+          0.018018018018018018
+        ]
+      }
+    },
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 20261103
+  }
+}

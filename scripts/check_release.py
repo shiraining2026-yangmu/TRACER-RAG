@@ -27,6 +27,20 @@ REQUIRED = {"README.md", "README.zh-CN.md", "RIGHTS.md", "DATA_AVAILABILITY.md",
             "docs/REPRODUCIBILITY.md", "docs/DATA_CONTRACTS.md", "docs/RELEASE_SCOPE.md",
             "reproducibility/SOURCE_MANIFEST.json", "run_evicr.py", "prepare_ter_corpus.py",
             "export_evicr_qd_sft.py", "paired_statistics.py", "examples/offline_demo.py"}
+REVIEWED_SUPPORTING_CSVS = {
+    "reproducibility/supporting_data/" + name for name in (
+        "archived_exam_correctness.csv", "archived_paired_statistics_primary.csv",
+        "archived_paired_statistics_sensitivity.csv", "archived_no_rag_vs_dense.csv",
+        "structure_assessments.csv", "open_qa_ai_scores.csv", "strict_ablation_aggregates.csv",
+        "evaluation_query_membership.csv", "critic_seed_build_membership.csv",
+    )
+}
+REQUIRED |= REVIEWED_SUPPORTING_CSVS | {
+    "scripts/check_supporting_data.py", "reproducibility/supporting_data/README.md",
+    "reproducibility/supporting_data/DATA_DICTIONARY.md",
+    "reproducibility/supporting_data/PROVENANCE.json",
+    "reproducibility/supporting_data/numeric_summary.json",
+}
 
 
 def public_files():
@@ -56,7 +70,7 @@ def main():
             issues.append("Excluded artifact category: " + name)
         if path.name.startswith(".env") and path.name != ".env.example":
             issues.append("Environment file: " + name)
-        if path.suffix.lower() == ".csv" and not name.startswith("reproducibility/weight_search/"):
+        if path.suffix.lower() == ".csv" and not (name.startswith("reproducibility/weight_search/") or name in REVIEWED_SUPPORTING_CSVS):
             issues.append("Unreviewed CSV: " + name)
         try:
             text = path.read_text(encoding="utf-8-sig")

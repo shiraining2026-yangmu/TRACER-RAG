@@ -44,6 +44,17 @@ index/
 # Explicitly reviewed numeric aggregate search tables only.
 !reproducibility/weight_search/*.csv
 
+# Explicitly reviewed identifier/numeric supporting tables only.
+!reproducibility/supporting_data/archived_exam_correctness.csv
+!reproducibility/supporting_data/archived_paired_statistics_primary.csv
+!reproducibility/supporting_data/archived_paired_statistics_sensitivity.csv
+!reproducibility/supporting_data/archived_no_rag_vs_dense.csv
+!reproducibility/supporting_data/structure_assessments.csv
+!reproducibility/supporting_data/open_qa_ai_scores.csv
+!reproducibility/supporting_data/strict_ablation_aggregates.csv
+!reproducibility/supporting_data/evaluation_query_membership.csv
+!reproducibility/supporting_data/critic_seed_build_membership.csv
+
 # Logs and caches
 *.log
 __pycache__/

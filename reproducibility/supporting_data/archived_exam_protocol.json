@@ -1,0 +1,240 @@
+{
+  "version": "archived-exam-supporting-data-20261110",
+  "raw_questions": {
+    "2021": 566,
+    "2022": 596
+  },
+  "scored_all": {
+    "2021": 554,
+    "2022": 584
+  },
+  "primary_excluded_application_ids": [
+    "QB-2022-TCM-03-080"
+  ],
+  "primary_n": 1137,
+  "all_items_sensitivity_n": 1138,
+  "exclusion_reason": "Known Critic-training overlap; scoring exclusion does not establish a cleanly retrained adapter.",
+  "routing": "Historical answer-key-selected wrong-only refinement; correct upstream answers were retained.",
+  "interpretation": "Conditional repair diagnostics; not blind full-Test deployment effects. No new inference was performed for this release.",
+  "model_protocols": {
+    "gemma2_9b_it": {
+      "protocol": "experiment1_6_revision_v1",
+      "model": "gemma2_9b_it",
+      "historical_source": "questionbank_eval/model_benchmarks/ter_wrong_only_batch4_memory_v3/gemma2_9b_it",
+      "reported_arms": [
+        "dense",
+        "ter",
+        "evicr"
+      ],
+      "rows_per_year": {
+        "2021": 30,
+        "2022": 31
+      },
+      "batch_size": 4,
+      "generator_max_tokens": 32,
+      "evidence_critic_max_tokens": 640,
+      "answer_critic_max_tokens": null,
+      "answer_critic_enabled": false,
+      "answer_key_used_for_model_input": false,
+      "revision_questions_sha256": "1ce5d626f900aa7a01e2b9fa89436dd7a2b3e071c8b2f6f943ad4b107616333b"
+    },
+    "internlm3_8b_instruct": {
+      "protocol": "experiment1_6_revision_v1",
+      "model": "internlm3_8b_instruct",
+      "historical_source": "questionbank_eval/model_benchmarks/internlm3_8b_instruct",
+      "reported_arms": [
+        "dense",
+        "ter",
+        "evicr"
+      ],
+      "rows_per_year": {
+        "2021": 30,
+        "2022": 31
+      },
+      "batch_size": 4,
+      "generator_max_tokens": 32,
+      "evidence_critic_max_tokens": 640,
+      "answer_critic_max_tokens": null,
+      "answer_critic_enabled": false,
+      "answer_key_used_for_model_input": false,
+      "revision_questions_sha256": "1ce5d626f900aa7a01e2b9fa89436dd7a2b3e071c8b2f6f943ad4b107616333b"
+    },
+    "meta_llama_3_1_8b_instruct": {
+      "protocol": "experiment1_6_revision_v1",
+      "model": "meta_llama_3_1_8b_instruct",
+      "historical_source": "questionbank_eval/model_benchmarks/meta_llama_3_1_8b_instruct",
+      "reported_arms": [
+        "dense",
+        "ter",
+        "evicr"
+      ],
+      "rows_per_year": {
+        "2021": 30,
+        "2022": 31
+      },
+      "batch_size": 4,
+      "generator_max_tokens": 32,
+      "evidence_critic_max_tokens": 640,
+      "answer_critic_max_tokens": null,
+      "answer_critic_enabled": false,
+      "answer_key_used_for_model_input": false,
+      "revision_questions_sha256": "1ce5d626f900aa7a01e2b9fa89436dd7a2b3e071c8b2f6f943ad4b107616333b"
+    },
+    "mistral_7b_instruct_v03": {
+      "protocol": "experiment1_6_revision_v1",
+      "model": "mistral_7b_instruct_v03",
+      "historical_source": "questionbank_eval/model_benchmarks/ter_wrong_only_batch4_v1/mistral_7b_instruct_v03",
+      "reported_arms": [
+        "dense",
+        "ter",
+        "evicr"
+      ],
+      "rows_per_year": {
+        "2021": 30,
+        "2022": 31
+      },
+      "batch_size": 4,
+      "generator_max_tokens": 32,
+      "evidence_critic_max_tokens": 640,
+      "answer_critic_max_tokens": null,
+      "answer_critic_enabled": false,
+      "answer_key_used_for_model_input": false,
+      "revision_questions_sha256": "1ce5d626f900aa7a01e2b9fa89436dd7a2b3e071c8b2f6f943ad4b107616333b"
+    },
+    "qwen2_5_7b_instruct": {
+      "protocol": "experiment1_6_revision_v1",
+      "model": "qwen2_5_7b_instruct",
+      "historical_source": "questionbank_eval/model_benchmarks/qwen2_5_7b_instruct",
+      "reported_arms": [
+        "dense",
+        "ter",
+        "evicr"
+      ],
+      "rows_per_year": {
+        "2021": 30,
+        "2022": 31
+      },
+      "batch_size": 4,
+      "generator_max_tokens": 32,
+      "evidence_critic_max_tokens": 640,
+      "answer_critic_max_tokens": null,
+      "answer_critic_enabled": false,
+      "answer_key_used_for_model_input": false,
+      "revision_questions_sha256": "1ce5d626f900aa7a01e2b9fa89436dd7a2b3e071c8b2f6f943ad4b107616333b"
+    },
+    "qwen35_9b": {
+      "protocol": "experiment1_6_revision_v1",
+      "model": "qwen35_9b",
+      "historical_source": "questionbank_eval/model_benchmarks/qwen35_replay_v1",
+      "reported_arms": [
+        "dense",
+        "ter",
+        "evicr"
+      ],
+      "rows_per_year": {
+        "2021": 30,
+        "2022": 31
+      },
+      "batch_size": 4,
+      "generator_max_tokens": 32,
+      "evidence_critic_max_tokens": 640,
+      "answer_critic_max_tokens": 384,
+      "answer_critic_enabled": true,
+      "answer_key_used_for_model_input": false,
+      "revision_questions_sha256": "1ce5d626f900aa7a01e2b9fa89436dd7a2b3e071c8b2f6f943ad4b107616333b"
+    },
+    "qwen3_8b": {
+      "protocol": "experiment1_6_revision_v1",
+      "model": "qwen3_8b",
+      "historical_source": "questionbank_eval/model_benchmarks/qwen3_8b",
+      "reported_arms": [
+        "dense",
+        "ter",
+        "evicr"
+      ],
+      "rows_per_year": {
+        "2021": 30,
+        "2022": 31
+      },
+      "batch_size": 4,
+      "generator_max_tokens": 32,
+      "evidence_critic_max_tokens": 640,
+      "answer_critic_max_tokens": null,
+      "answer_critic_enabled": false,
+      "answer_key_used_for_model_input": false,
+      "revision_questions_sha256": "1ce5d626f900aa7a01e2b9fa89436dd7a2b3e071c8b2f6f943ad4b107616333b"
+    },
+    "yi15_9b_chat": {
+      "protocol": "experiment1_6_revision_v1",
+      "model": "yi15_9b_chat",
+      "historical_source": "questionbank_eval/model_benchmarks/ter_wrong_only_batch4_memory_v5/yi15_9b_chat",
+      "reported_arms": [
+        "dense",
+        "ter",
+        "evicr"
+      ],
+      "rows_per_year": {
+        "2021": 30,
+        "2022": 31
+      },
+      "batch_size": 4,
+      "generator_max_tokens": 32,
+      "evidence_critic_max_tokens": 640,
+      "answer_critic_max_tokens": null,
+      "answer_critic_enabled": false,
+      "answer_key_used_for_model_input": false,
+      "revision_questions_sha256": "1ce5d626f900aa7a01e2b9fa89436dd7a2b3e071c8b2f6f943ad4b107616333b"
+    }
+  },
+  "archived_statistics_primary": {
+    "version": "experiment1_6_revision_paired_stats_v3",
+    "input": "paired_correctness_matrix.csv",
+    "input_sha256": "de39affc29bf00a4672e45f0a800ee7987e26f309f23c98a724947d0dca7d71b",
+    "rows": 1137,
+    "models": 8,
+    "arms": [
+      "dense",
+      "ter",
+      "evicr"
+    ],
+    "years": [
+      "2021",
+      "2022",
+      "combined"
+    ],
+    "bootstrap_draws": 10000,
+    "mcnemar": "exact two-sided binomial test on discordant pairs among singleton questions only",
+    "shared_case_inference": "shared-option groups resampled as intact clusters for the primary paired 95% CI; no cluster-adjusted McNemar p-value is claimed",
+    "software": {
+      "python": "3.11.6",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1"
+    }
+  },
+  "archived_statistics_sensitivity": {
+    "version": "experiment1_6_revision_paired_stats_v3",
+    "input": "paired_correctness_matrix.csv",
+    "input_sha256": "de39affc29bf00a4672e45f0a800ee7987e26f309f23c98a724947d0dca7d71b",
+    "rows": 1138,
+    "models": 8,
+    "arms": [
+      "dense",
+      "ter",
+      "evicr"
+    ],
+    "years": [
+      "2021",
+      "2022",
+      "combined"
+    ],
+    "bootstrap_draws": 10000,
+    "mcnemar": "exact two-sided binomial test on discordant pairs among singleton questions only",
+    "shared_case_inference": "shared-option groups resampled as intact clusters for the primary paired 95% CI; no cluster-adjusted McNemar p-value is claimed",
+    "software": {
+      "python": "3.11.6",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1"
+    }
+  },
+  "cluster_definition": "year + unit + explicit shared_option_group; other rows are singletons. This does not establish that all shared-stem dependence has been captured."
+}
